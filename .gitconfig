@@ -3,3 +3,9 @@
 	ci = commit
 	st = status
 	br = branch
+	df = diff
+	dc = diff --cached
+	lg = log -p
+	who = shortlog -s --
+[color]
+	ui = true
