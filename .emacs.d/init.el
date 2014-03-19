@@ -38,3 +38,10 @@
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido)))
 (custom-set-faces)
+
+;; rvm.el
+(add-to-list 'load-path "~/.emacs.d/elisp/external/rvm.el")
+(require 'rvm)
+(rvm-use-default)
+(add-hook 'ruby-mode-hook
+          (lambda () (rvm-activate-corresponding-ruby)))
