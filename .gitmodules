@@ -16,3 +16,6 @@
 [submodule ".emacs.d/modes/yaml-mode"]
 	path = .emacs.d/modes/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode.git
+[submodule ".emacs.d/modes/scss-mode"]
+	path = .emacs.d/modes/scss-mode
+	url = https://github.com/antonj/scss-mode.git

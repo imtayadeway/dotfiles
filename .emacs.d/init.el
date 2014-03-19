@@ -62,3 +62,8 @@
 (add-to-list 'load-path "~/.emacs.d/modes/yaml-mode")
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+;; scss-mode
+(add-to-list 'load-path "~/.emacs.d/modes/scss-mode")
+(require 'scss-mode)
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
