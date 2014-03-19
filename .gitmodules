@@ -10,3 +10,6 @@
 [submodule ".emacs.d/elisp/external/rinari"]
 	path = .emacs.d/elisp/external/rinari
 	url = https://github.com/eschulte/rinari.git
+[submodule ".emacs.d/modes/haml-mode"]
+	path = .emacs.d/modes/haml-mode
+	url = https://github.com/nex3/haml-mode.git

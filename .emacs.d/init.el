@@ -49,3 +49,11 @@
 ;; windows
 (windmove-default-keybindings)
 (winner-mode 1)
+
+;; rinari
+(add-to-list 'load-path "~/.emacs.d/elisp/external/rinari")
+(require 'rinari)
+
+;; haml-mode
+(add-to-list 'load-path "~/.emacs.d/modes/haml-mode")
+(require 'haml-mode)
