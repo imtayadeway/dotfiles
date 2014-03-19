@@ -5,7 +5,7 @@
              '("\\(Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
 
 ;; color-theme and choco
-(add-to-list 'load-path "~/.emacs.d/themes/")
+(add-to-list 'load-path "~/.emacs.d/themes/choco")
 (require 'color-theme)
 (require 'color-theme-choco)
 (eval-after-load "color-theme"
