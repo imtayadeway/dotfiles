@@ -25,3 +25,6 @@
 [submodule ".emacs.d/elisp/external/inf-ruby"]
 	path = .emacs.d/elisp/external/inf-ruby
 	url = https://github.com/nonsequitur/inf-ruby.git
+[submodule ".emacs.d/modes/rspec-mode"]
+	path = .emacs.d/modes/rspec-mode
+	url = https://github.com/pezra/rspec-mode.git

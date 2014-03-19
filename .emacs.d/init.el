@@ -84,3 +84,9 @@
 (add-to-list 'load-path "~/.emacs.d/elisp/external/inf-ruby")
 (autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
 (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+
+;; rspec-mode
+(add-to-list 'load-path "~/.emacs.d/modes/rspec-mode")
+(require 'rspec-mode)
+(eval-after-load 'rspec-mode
+ '(rspec-install-snippets))
