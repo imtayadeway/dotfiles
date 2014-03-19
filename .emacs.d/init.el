@@ -46,5 +46,6 @@
 (add-hook 'ruby-mode-hook
           (lambda () (rvm-activate-corresponding-ruby)))
 
-;; windmove
+;; windows
 (windmove-default-keybindings)
+(winner-mode 1)
