@@ -13,3 +13,6 @@
 [submodule ".emacs.d/modes/haml-mode"]
 	path = .emacs.d/modes/haml-mode
 	url = https://github.com/nex3/haml-mode.git
+[submodule ".emacs.d/modes/yaml-mode"]
+	path = .emacs.d/modes/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git
