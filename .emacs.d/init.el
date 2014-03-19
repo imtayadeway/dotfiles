@@ -79,3 +79,8 @@
   '(progn
      (define-key coffee-mode-map [(meta r)] 'coffee-compile-buffer)
      (define-key coffee-mode-map (kbd "C-j") 'coffee-newline-and-indent)))
+
+;; inf-ruby
+(add-to-list 'load-path "~/.emacs.d/elisp/external/inf-ruby")
+(autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
+(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
