@@ -13,3 +13,5 @@
 	ui = true
 [commit]
 	template = ~/.gitmessage
+[core]
+	editor = emacs
