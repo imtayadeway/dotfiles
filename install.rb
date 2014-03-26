@@ -1,6 +1,7 @@
 files = [
   '.emacs.d',
   '.gitconfig',
+  '.gitmessage',
   '.rspec'
 ]
 

@@ -11,3 +11,5 @@
 	who = shortlog -s --
 [color]
 	ui = true
+[commit]
+	template = ~/.gitmessage
