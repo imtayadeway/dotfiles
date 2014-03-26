@@ -1,7 +1,10 @@
-;; column 80
+;; whitespace
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)
+
+;; pair character completion
+(electric-pair-mode 1)
 
 ;; ruby mode
 (add-to-list 'auto-mode-alist
