@@ -1,16 +1,21 @@
 [include]
 	path = ~/.gitconfig.local
 [alias]
-	co = checkout
-	ci = commit
-	st = status
+	a = add
+	aa = !git add -u && git add . && git status
+	amend = commit --amend
 	br = branch
+	co = checkout
+	ci = commit -v
+	cm = commit -m
 	df = diff
 	dc = diff --cached
-	lg = log -p
-	who = shortlog -s --
-	up = !git fetch origin && git rebase origin/master
+	done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && git push
 	ir = !git rebase -i origin/master
+	lg = log -p
+	st = status
+	up = !git fetch origin && git rebase origin/master
+	who = shortlog -s --
 [color]
 	ui = true
 [commit]
