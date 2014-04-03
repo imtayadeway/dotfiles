@@ -9,9 +9,13 @@
 	dc = diff --cached
 	lg = log -p
 	who = shortlog -s --
+	up = !git fetch origin && git rebase origin/master
+	ir = !git rebase -i origin/master
 [color]
 	ui = true
 [commit]
 	template = ~/.gitmessage
 [core]
 	editor = emacs
+[push]
+	default = current
