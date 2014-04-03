@@ -8,9 +8,9 @@
 	co = checkout
 	ci = commit -v
 	cm = commit -m
-	df = diff
 	dc = diff --cached
-	done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && git push
+	df = diff
+	done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
 	ir = !git rebase -i origin/master
 	lg = log -p
 	pp = !git pull && git push
