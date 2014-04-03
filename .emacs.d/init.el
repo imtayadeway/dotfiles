@@ -1,3 +1,6 @@
+;; welcome screen
+(setq inhibit-startup-message t)
+
 ;; whitespace
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
