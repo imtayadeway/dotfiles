@@ -1,6 +1,13 @@
 ;; welcome screen
 (setq inhibit-startup-message t)
 
+;; full screen
+(custom-set-variables
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
+
+;; toolbar
+(tool-bar-mode -1)
+
 ;; whitespace
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
