@@ -16,6 +16,10 @@
 ;; pair character completion
 (electric-pair-mode 1)
 
+;; rainbow mode
+(add-to-list 'load-path "~/.emacs.d/modes/rainbow-mode")
+(require 'rainbow-mode)
+
 ;; ruby mode
 (add-to-list 'auto-mode-alist
              '("\\.\\(?:gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))

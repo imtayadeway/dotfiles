@@ -28,3 +28,6 @@
 [submodule ".emacs.d/modes/rspec-mode"]
 	path = .emacs.d/modes/rspec-mode
 	url = https://github.com/pezra/rspec-mode.git
+[submodule ".emacs.d/modes/rainbow-mode"]
+	path = .emacs.d/modes/rainbow-mode
+	url = https://github.com/emacsmirror/rainbow-mode
