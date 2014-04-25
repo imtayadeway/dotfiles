@@ -17,6 +17,7 @@
 (depends-on "multi-term")
 (depends-on "pallet")
 (depends-on "projectile")
+(depends-on "rainbow-mode")
 (depends-on "rhtml-mode")
 (depends-on "rinari")
 (depends-on "rspec-mode")
