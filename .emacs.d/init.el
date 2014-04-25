@@ -69,19 +69,22 @@
 ;; ;; pair character completion
 (electric-pair-mode 1)
 
-;; ;; rainbow mode
-;; (add-to-list 'load-path "~/.emacs.d/modes/rainbow-mode")
-;; (require 'rainbow-mode)
-
 ;; ;; line numbers
 (global-linum-mode 1)
 
-;; ;; ido
+;; ido
 ;; (require 'ido)
 ;; (ido-mode t)
 ;; (custom-set-variables
 ;;  '(ido-enable-flex-matching t)
 ;;  '(ido-mode (quote both) nil (ido)))
 ;; (custom-set-faces)
+
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
 
 (setq confirm-kill-emacs 'y-or-n-p)
