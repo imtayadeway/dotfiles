@@ -11,6 +11,7 @@
 (depends-on "gitconfig-mode")
 (depends-on "gitignore-mode")
 (depends-on "haml-mode")
+(depends-on "ido-vertical-mode")
 (depends-on "inf-ruby")
 (depends-on "magit")
 (depends-on "markdown-mode")
