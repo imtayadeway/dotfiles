@@ -91,3 +91,4 @@
 (setq ido-use-faces nil)
 
 (setq confirm-kill-emacs 'y-or-n-p)
+(put 'downcase-region 'disabled nil)
