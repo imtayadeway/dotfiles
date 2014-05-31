@@ -37,6 +37,9 @@
 
 (require 'multi-term)
 
+;; allow 20MB of memory (instead of 0.76MB) before calling GC
+(setq gc-cons-threshold 20000000)
+
 ;; mode-specific configuration
 (mapcar (lambda (mode-file-name) (load mode-file-name))
         (directory-files "~/.emacs.d/custom/" nil ".el"))
@@ -82,9 +85,11 @@
 
 (require 'flx-ido)
 (ido-mode 1)
+(ido-vertical-mode 1)
 (ido-everywhere 1)
 (flx-ido-mode 1)
 ;; disable ido faces to see flx highlights.
 (setq ido-use-faces nil)
 
 (setq confirm-kill-emacs 'y-or-n-p)
+(put 'downcase-region 'disabled nil)
