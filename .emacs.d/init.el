@@ -91,5 +91,8 @@
 ;; disable ido faces to see flx highlights.
 (setq ido-use-faces nil)
 
+(load "utils.el")
+(load "keybindings.el")
+
 (setq confirm-kill-emacs 'y-or-n-p)
 (put 'downcase-region 'disabled nil)
