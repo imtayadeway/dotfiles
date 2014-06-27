@@ -76,13 +76,6 @@
 (global-linum-mode 1)
 
 ;; ido
-;; (require 'ido)
-;; (ido-mode t)
-;; (custom-set-variables
-;;  '(ido-enable-flex-matching t)
-;;  '(ido-mode (quote both) nil (ido)))
-;; (custom-set-faces)
-
 (require 'flx-ido)
 (ido-mode 1)
 (ido-vertical-mode 1)
