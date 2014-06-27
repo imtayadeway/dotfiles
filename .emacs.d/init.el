@@ -93,6 +93,7 @@
 
 (load "utils.el")
 (load "keybindings.el")
+(load "hide-modes.el")
 
 (setq confirm-kill-emacs 'y-or-n-p)
 (put 'downcase-region 'disabled nil)
