@@ -90,3 +90,4 @@
 
 (setq confirm-kill-emacs 'y-or-n-p)
 (put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
