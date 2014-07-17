@@ -9,3 +9,9 @@
 ;; switch to new window on split
 (global-set-key (kbd "C-x 2") 'split-window-below-and-switch)
 (global-set-key (kbd "C-x 3") 'split-window-right-and-switch)
+
+;; change font size
+(define-key global-map (kbd "C-+") 'text-scale-increase)
+(define-key global-map (kbd "C-=") 'text-scale-increase)
+(define-key global-map (kbd "C-_") 'text-scale-decrease)
+(define-key global-map (kbd "C--") 'text-scale-decrease)
