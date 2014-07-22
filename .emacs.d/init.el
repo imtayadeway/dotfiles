@@ -89,6 +89,9 @@
 (load "keybindings.el")
 (load "hide-modes.el")
 
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+(require 'mu4e)
+
 (setq confirm-kill-emacs 'y-or-n-p)
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)

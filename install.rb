@@ -4,6 +4,8 @@ files = [
   '.emacs.d',
   '.gitconfig',
   '.gitmessage',
+  '.offlineimaprc',
+  '.offlineimap.py',
   '.rspec'
 ]
 
