@@ -16,6 +16,7 @@
 	pp = !git pull && git push
 	rmb = !sh -c 'git branch -d $1 && git push --delete origin $1' -
 	st = status
+	su = submodule update --init --recursive
 	up = !git fetch origin && git rebase origin/master
 	who = shortlog -s --
 [color]
