@@ -1,4 +1,6 @@
 files = [
+  '.bashrc',
+  '.bashrc.aliases',
   '.emacs.d',
   '.gitconfig',
   '.gitmessage',
