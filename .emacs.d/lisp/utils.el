@@ -9,6 +9,14 @@
   (transpose-lines 1)
   (forward-line -1))
 
+(defun date ()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d")))
+
+(defun time ()
+  (interactive)
+  (insert (format-time-string "%H:%M:%S")))
+
 (defun tidy-region (start end)
   "Indent, delete whitespace, and untabify the region."
   (interactive "r")
