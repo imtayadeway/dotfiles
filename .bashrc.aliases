@@ -6,6 +6,7 @@ alias less="less -R" # display colors correctly
 alias la="ls -la"
 alias ll="ls -l"
 alias ln="ln -v"
+alias lh="ls -lah"
 alias mkdir="mkdir -p"
 alias n="e ~/Documents/notes"
 alias now="date '+%Y-%m-%d %H:%M'"
