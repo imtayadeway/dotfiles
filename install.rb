@@ -1,17 +1,18 @@
 files = [
-  '.bash_profile',
-  '.bashrc',
-  '.bashrc.aliases',
-  '.emacs.d',
-  '.gitconfig',
-  '.gitmessage',
-  '.offlineimaprc',
-  '.offlineimap.py',
-  '.rspec'
+  'bash_profile',
+  'bashrc',
+  'bashrc.aliases',
+  'emacs.d',
+  'gitconfig',
+  'gitignore',
+  'gitmessage',
+  'offlineimaprc',
+  'offlineimap.py',
+  'rspec'
 ]
 
 files.each do |file|
-  target_file = File.expand_path("~/#{ file }")
+  target_file = File.expand_path("~/.#{ file }")
   source_file = File.expand_path("~/.dotfiles/#{ file }")
 
   if File.exists?(target_file)
