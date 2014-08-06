@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source $HOME/.bin/git-completion.sh
+
 ### path
 
 pathmunge () {

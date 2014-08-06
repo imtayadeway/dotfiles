@@ -2,6 +2,7 @@ files = [
   'bash_profile',
   'bashrc',
   'bashrc.aliases',
+  'bin',
   'emacs.d',
   'gitconfig',
   'gitignore',
