@@ -18,3 +18,6 @@
 (define-key global-map (kbd "C-=") 'text-scale-increase)
 (define-key global-map (kbd "C-_") 'text-scale-decrease)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
+
+;; expand-region
+(global-set-key (kbd "C-'") 'er/expand-region)
