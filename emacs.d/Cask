@@ -6,6 +6,7 @@
 (depends-on "coffee-mode")
 (depends-on "color-theme")
 (depends-on "diminish")
+(depends-on "expand-region")
 (depends-on "feature-mode")
 (depends-on "flx-ido")
 (depends-on "flycheck")
