@@ -33,6 +33,12 @@ source $HOME/.bashrc.aliases
 
 source $HOME/.rvm/scripts/rvm # load rvm
 
+### autocompletion for git aliases
+_git_rmb()
+{
+    _git_branch
+}
+
 ### local config settings, if any
 
 if [ -e $HOME/.bashrc.local ]; then
