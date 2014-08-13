@@ -4,6 +4,7 @@ files = [
   'bashrc.aliases',
   'bin',
   'emacs.d',
+  'gemrc',
   'gitconfig',
   'gitignore',
   'gitmessage',
