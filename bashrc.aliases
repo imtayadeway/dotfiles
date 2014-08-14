@@ -38,7 +38,7 @@ alias path="echo $PATH | tr ':' '\n'"
 alias tree="tree -C" # add colors
 alias unb="tar xjvf"
 alias ung="tar xzvf"
-alias usage="du -sch" |xargs printf '%-10s %-10s %-10s\n' | uniq"
+alias usage="du -sch"
 
 ### Meta
 alias rc="$EDITOR ~/.bashrc"
