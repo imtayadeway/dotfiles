@@ -32,9 +32,7 @@ alias less="less -R" # display colors correctly
 alias lh="ls -lah"
 alias ll="ls -l"
 alias ln="ln -v"
-alias ls="ls --color -h"
 alias mkdir="mkdir -p"
-alias myip="ifconfig eth0 | grep 'inet ' | cut --delimiter=' ' -f12 | sed s/addr://"
 alias n="e ~/Documents/notes"
 alias now="date '+%Y-%m-%d %H:%M'"
 alias op="gnome-open"
@@ -45,6 +43,14 @@ alias tree="tree -C" # add colors
 alias unb="tar xjvf"
 alias ung="tar xzvf"
 alias usage="du -sch"
+
+if [[ $(uname) == Darwin ]]; then
+    alias ls="ls -G -h"
+    alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\   -f2"
+else
+    alias ls="ls --color -h"
+    alias myip="ifconfig eth0 | grep 'inet ' | cut --delimiter=' ' -f12 | sed s/addr://"
+fi
 
 ### Meta
 alias rc="$EDITOR ~/.bashrc"
