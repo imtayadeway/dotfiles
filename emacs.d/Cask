@@ -33,5 +33,6 @@
 (depends-on "ruby-end")
 (depends-on "rvm")
 (depends-on "scss-mode")
+(depends-on "web-mode")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
