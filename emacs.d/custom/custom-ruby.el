@@ -4,7 +4,7 @@
 (add-hook 'ruby-mode-hook
 (lambda ()
             (rvm-activate-corresponding-ruby)
-(setq ruby-insert-encoding-magic-comment nil)
+            (setq ruby-insert-encoding-magic-comment nil)
             (rinari-minor-mode)
             (yas-minor-mode)
             (flycheck-mode)
