@@ -60,7 +60,7 @@
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
+(setq-default indent-tabs-mode nil)
 (setq require-final-newline t)
 
 ;; snippets
