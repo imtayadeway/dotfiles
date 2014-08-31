@@ -3,6 +3,7 @@
 (global-set-key (kbd "C-c s") 'multi-term)
 (global-set-key (kbd "C-c m") 'mu4e)
 (global-set-key (kbd "C-c d") 'date)
+(global-set-key (kbd "C-c i") 'open-index-file)
 (global-set-key (kbd "C-c t") 'time)
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -19,6 +20,9 @@
 (define-key global-map (kbd "C-=") 'text-scale-increase)
 (define-key global-map (kbd "C-_") 'text-scale-decrease)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
+
+;; org-mode
+(global-set-key (kbd "M-n") 'org-capture-todo)
 
 ;; expand-region
 (global-set-key (kbd "C-'") 'er/expand-region)
