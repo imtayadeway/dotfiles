@@ -1,4 +1,4 @@
-(setq org-directory "~/org")
+(setq org-directory "~/Documents/org")
 (setq notes-directory "~/Documents/notes")
 
 (defun construct-filename (directory filename)
