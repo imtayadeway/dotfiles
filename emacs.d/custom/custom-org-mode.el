@@ -1,5 +1,6 @@
 (setq org-directory "~/Documents/org")
 (setq notes-directory "~/Documents/notes")
+(setq org-mobile-directory "~/Dropbox/MobileOrg")
 
 (defun construct-filename (directory filename)
   (concat (file-name-as-directory directory) filename))
