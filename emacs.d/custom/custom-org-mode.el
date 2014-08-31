@@ -50,12 +50,12 @@
 
         ("q" "Media queues")
 
-        ("qm" "Movies"
+        ("qf" "Films"
          entry
-         (file (construct-filename notes-directory "media-movies.org"))
+         (file (construct-filename notes-directory "media-films.org"))
          "* %?\n")
 
-        ("qu" "Music"
+        ("qm" "Music"
          entry
          (file (construct-filename notes-directory "media-music.org"))
          "* %?\n")
