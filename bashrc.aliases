@@ -25,6 +25,7 @@ alias n="e ~/Documents/notes"
 alias now="date '+%Y-%m-%d %H:%M'"
 alias op="gnome-open"
 alias oports="echo 'User:      Command:   Port:'; echo '----------------------------' ; lsof -i 4 -P -n | grep -i 'listen' | awk '{print \$3, \$1, \$9}' | sed 's/ [a-z0-9\.\*]*:/ /' | sort -k 3 -n |xargs printf '%-10s %-10s %-10s\n' | uniq"
+alias pad="padrino"
 alias padrion="padrino"
 alias path="echo $PATH | tr ':' '\n'"
 alias tree="tree -C" # add colors

@@ -17,19 +17,21 @@
   dm = diff master
   done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
   gr = grep -n
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   ir = !git rebase -i origin/master
   lg = log -p
-  loc = !git ls-files | xargs wc -l
+  loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
   pl = pull
   ps = push
   psf = push --force
   pp = !git pull && git push
+  rename = branch -m
   rmb = !sh -c 'git branch -d $1 && git push --delete origin $1' -
   s = status
   st = status
   su = submodule update --init --recursive
   up = !git fetch origin && git rebase origin/master
-  who = shortlog -s --
+  who = shortlog -n -s --no-merges
 [color]
   ui = true
 [commit]
@@ -41,3 +43,5 @@
   default = current
 [merge]
   ff = only
+[branch]
+  autosetuprebase = always
