@@ -16,6 +16,7 @@ pathmunge () {
 
 pathmunge /usr/local/sbin
 pathmunge /usr/local/bin
+pathmunge /usr/local/heroku/bin
 pathmunge /sbin after
 pathmunge $HOME/.rvm/bin after
 pathmunge $HOME/.cask/bin after
