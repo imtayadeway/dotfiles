@@ -15,6 +15,7 @@ alias e=$EDITOR
 alias fucking="sudo"
 alias g="git"
 alias generate_rails_tags="rm -f TAGS; ctags-exuberant -a -e -f TAGS --tag-relative -R app lib vendor"
+alias hpush="git push heroku master"
 alias la="ls -la"
 alias less="less -R" # display colors correctly
 alias lh="ls -lah"
