@@ -5,6 +5,7 @@
   aa = !git add -u && git add . && git status
   amend = commit --amend -C HEAD
   br = branch
+  bra = branch -a
   ca = commit -a
   cleanup = !git remote prune origin && git gc && git clean -dfx && git stash clear
   co = checkout
