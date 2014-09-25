@@ -42,7 +42,6 @@
 [commit]
   template = ~/.gitmessage
 [core]
-  editor = emacs
   excludesfile = ~/.gitignore
 [push]
   default = current
