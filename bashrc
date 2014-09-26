@@ -46,6 +46,8 @@ _git_rmb()
     _git_branch
 }
 
+complete -o bashdefault -o default -o nospace -F _git g
+
 ### local config settings, if any
 
 if [ -e $HOME/.bashrc.local ]; then
