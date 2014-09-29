@@ -13,6 +13,8 @@
   ci = commit -v
   cl = clone
   cm = commit -m
+  cod = checkout develop
+  com = checkout master
   dc = diff --cached
   dd = diff develop
   df = diff
@@ -37,6 +39,7 @@
   up = !git fetch origin && git rebase origin/master
   upd = !git fetch origin && git rebase origin/develop
   who = shortlog -n -s --no-merges
+  wip = !git add -A && git commit -m "wip"
 [color]
   ui = true
 [commit]
