@@ -7,6 +7,7 @@
             (setq ruby-insert-encoding-magic-comment nil)
             (rinari-minor-mode)
             (yas-minor-mode)
+            (ruby-end-mode)
             (flycheck-mode)
             (global-set-key (kbd "C-c C-f") 'rinari-find-file-in-project)
             (setq rinari-tags-file-name "TAGS")
