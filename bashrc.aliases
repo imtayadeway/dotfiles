@@ -39,6 +39,7 @@ alias glg="git log -p"
 alias gpl="git pull"
 alias gps="git push"
 alias gpsf="git push --force"
+alias gs="git status"
 alias gst="git status"
 alias hpush="git push heroku master"
 alias killruby='killall -9 ruby'
