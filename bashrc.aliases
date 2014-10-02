@@ -16,6 +16,7 @@ alias ber="bundle exec ruby"
 alias bi="bundle install"
 alias bu="bundle update"
 alias c="cd"
+alias cuke="bundle exec cucumber"
 alias d="cd ~/.dotfiles"
 alias dr="cd ~/Dropbox"
 alias e=$EDITOR
