@@ -10,7 +10,8 @@ files = [
   'gitmessage',
   'offlineimaprc',
   'offlineimap.py',
-  'rspec'
+  'rspec',
+  'rubocop.yml'
 ]
 
 files.each do |file|
