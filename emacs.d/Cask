@@ -31,6 +31,7 @@
 (depends-on "rspec-mode")
 (depends-on "rubocop")
 (depends-on "ruby-end")
+(depends-on "ruby-refactor")
 (depends-on "rvm")
 (depends-on "scss-mode")
 (depends-on "web-mode")

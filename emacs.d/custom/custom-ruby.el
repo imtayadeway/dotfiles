@@ -8,6 +8,7 @@
             (rinari-minor-mode)
             (yas-minor-mode)
             (ruby-end-mode)
+            (ruby-refactor-mode)
             (flycheck-mode)
             (global-set-key (kbd "C-c C-f") 'rinari-find-file-in-project)
             (setq rinari-tags-file-name "TAGS")
