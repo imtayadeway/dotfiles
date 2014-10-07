@@ -4,6 +4,7 @@
 (source melpa)
 
 (depends-on "ace-jump-mode")
+(depends-on "ace-window")
 (depends-on "coffee-mode")
 (depends-on "color-theme")
 (depends-on "diminish")

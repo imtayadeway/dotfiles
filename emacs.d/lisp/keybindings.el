@@ -6,6 +6,7 @@
 (global-set-key (kbd "C-c i") 'open-index-file)
 (global-set-key (kbd "C-c j") 'ace-jump-mode)
 (global-set-key (kbd "C-c t") 'time)
+(global-set-key (kbd "C-c w") 'ace-window)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-M-\\") 'tidy-region)
 (global-set-key (kbd "C-M-|") 'tidy-buffer)
