@@ -26,9 +26,9 @@ pathmunge $HOME/.cask/bin after
 export DISPLAY=:0.0
 
 if [[ $(uname) == Darwin ]]; then
-export EDITOR="open -a Emacs"
+    export EDITOR="open -a Emacs"
 else
-export EDITOR="emacsclient -nw -c -a ''"
+    export EDITOR="emacsclient -nw -c -a ''"
 fi
 
 export LANG="en_US"
