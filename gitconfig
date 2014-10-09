@@ -32,6 +32,9 @@
   ps = push
   psf = push --force
   pp = !git pull && git push
+  rb = rebase
+  rba = rebase --abort
+  rbc = rebase --continue
   rename = branch -m
   rmb = !sh -c 'git branch -d $1 && git push --delete origin $1' -
   s = status
