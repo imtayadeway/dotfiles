@@ -10,6 +10,9 @@
 ;; welcome screen
 (setq inhibit-startup-message t)
 
+;; don't use dialogs
+(setq use-dialog-box nil)
+
 ;; windows
 (windmove-default-keybindings)
 (winner-mode 1)
