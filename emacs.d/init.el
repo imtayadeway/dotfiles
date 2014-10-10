@@ -43,6 +43,9 @@
 ;; allow 20MB of memory (instead of 0.76MB) before calling GC
 (setq gc-cons-threshold 20000000)
 
+;; treat camelcase as separate words
+(add-hook 'prog-mode-hook 'subword-mode)
+
 ;; mode-specific configuration
 (mapcar (lambda (mode-file-name) (load mode-file-name))
         (directory-files "~/.emacs.d/custom/" nil ".el"))
