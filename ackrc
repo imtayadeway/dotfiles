@@ -1,0 +1,11 @@
+--sort-files
+--color
+--ignore-dir=coverage
+--type-add
+ruby=.haml,.feature,.scss,.coffee
+--ignore-dir=vendor
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=doc
+--ignore-dir=coverage
+--ignore-dir=TAGS

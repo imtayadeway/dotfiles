@@ -1,4 +1,6 @@
 files = [
+  'ackrc',
+  'agignore',
   'bash_profile',
   'bashrc',
   'bashrc.aliases',
