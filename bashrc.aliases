@@ -74,7 +74,6 @@ alias oports="echo 'User:      Command:   Port:'; echo '------------------------
 alias pad="padrino"
 alias padrion="padrino"
 alias path="echo $PATH | tr ':' '\n'"
-alias rc="rails console"
 alias retag="rm -f TAGS; ctags -a -e -f TAGS --tag-relative -R --exclude=.git --exclude=log --exclude=tmp *"
 alias rr="rake routes"
 alias rs='bundle install && rails server -p 3000'
