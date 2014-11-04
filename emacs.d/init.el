@@ -81,10 +81,10 @@
 (wrap-region-add-wrapper "/" "/" nil 'ruby-mode)
 (wrap-region-add-wrapper "`" "`" nil '(markdown-mode ruby-mode))
 
-;; ;; pair character completion
+;; pair character completion
 (electric-pair-mode 1)
 
-;; ;; line numbers
+;; line numbers
 (global-linum-mode 1)
 
 ;; ido
