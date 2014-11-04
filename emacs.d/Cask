@@ -37,5 +37,6 @@
 (depends-on "rvm")
 (depends-on "scss-mode")
 (depends-on "web-mode")
+(depends-on "wrap-region")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
