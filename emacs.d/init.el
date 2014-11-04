@@ -76,6 +76,11 @@
 ;; use projectile everywhere
 (projectile-global-mode)
 
+;; wrap region
+(wrap-region-global-mode t)
+(wrap-region-add-wrapper "/" "/" nil 'ruby-mode)
+(wrap-region-add-wrapper "`" "`" nil '(markdown-mode ruby-mode))
+
 ;; ;; pair character completion
 (electric-pair-mode 1)
 
