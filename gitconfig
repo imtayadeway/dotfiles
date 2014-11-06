@@ -37,8 +37,8 @@
   rbc = rebase --continue
   rename = branch -m
   rmb = !sh -c 'git branch -d $1 && git push --delete origin $1' -
-  s = status
-  st = status
+  s = status --short
+  st = status --short
   su = submodule update --init --recursive
   up = !git fetch origin && git rebase origin/master
   upd = !git fetch origin && git rebase origin/develop
