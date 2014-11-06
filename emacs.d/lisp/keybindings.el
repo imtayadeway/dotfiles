@@ -11,6 +11,7 @@
 (global-set-key (kbd "C-M-|") 'tidy-buffer)
 (global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "M-#") 'sort-lines)
+(global-set-key (kbd "M-/") 'hippie-expand)
 
 ;; switch to new window on split
 (global-set-key (kbd "C-x 2") 'split-window-below-and-switch)
