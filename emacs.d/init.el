@@ -38,6 +38,8 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/custom")
 
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
 (require 'multi-term)
 
 ;; allow 20MB of memory (instead of 0.76MB) before calling GC
