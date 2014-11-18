@@ -45,6 +45,7 @@ alias gps="git push"
 alias gpsf="git push --force"
 alias gs="git status"
 alias gst="git status"
+alias guard="bundle exec guard"
 alias hpush="git push heroku master"
 alias killruby='killall -9 ruby'
 alias la="ls -la"
