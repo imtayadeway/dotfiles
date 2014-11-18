@@ -86,6 +86,9 @@
 ;; pair character completion
 (electric-pair-mode 1)
 
+;; show matching parens
+(show-paren-mode 1)
+
 ;; line numbers
 (global-linum-mode 1)
 
