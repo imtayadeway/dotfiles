@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: it_behaves_like "a shared example"
+# --
+it_behaves_like "${1:a shared example}"
