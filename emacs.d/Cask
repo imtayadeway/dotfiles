@@ -39,6 +39,7 @@
 (depends-on "ruby-end")
 (depends-on "ruby-refactor")
 (depends-on "rvm")
+(depends-on "sass-mode")
 (depends-on "scss-mode")
 (depends-on "web-mode")
 (depends-on "wrap-region")
