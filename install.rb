@@ -32,3 +32,9 @@ files.each do |file|
     File.symlink(source_file, target_file)
   end
 end
+
+if File.exists?(File.expand_path('~/.bash_profile'))
+  File.delete(File.expand_path('~/.bash_profile'))
+end
+
+File.symlink(File.expand_path('~/.bashrc'), File.expand_path('~/.bash_profile'))

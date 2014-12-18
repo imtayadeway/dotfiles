@@ -4,8 +4,6 @@ source $HOME/.bin/git-completion.sh
 
 ### path
 
-PATH=/usr/local/bin:$PATH
-
 pathmunge () {
   if ! echo $PATH | egrep -q "(^|:)$1($|:)" ; then
     if [ "$2" = "after" ] ; then
