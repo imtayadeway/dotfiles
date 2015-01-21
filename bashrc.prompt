@@ -3,3 +3,5 @@ _git_rmb()
 {
     _git_branch
 }
+
+__git_complete gco _git_checkout
