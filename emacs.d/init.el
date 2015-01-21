@@ -26,10 +26,6 @@
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
 
-;; Also auto refresh dired, but be quiet about it
-;; (setq global-auto-revert-non-file-buffers t)
-;; (setq auto-revert-verbose nil)
-
 ;; pallet
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
@@ -103,9 +99,6 @@
 (load "utils.el")
 (load "keybindings.el")
 (load "hide-modes.el")
-
-;; (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
-;; (require 'mu4e)
 
 (setq confirm-kill-emacs 'y-or-n-p)
 (put 'downcase-region 'disabled nil)
