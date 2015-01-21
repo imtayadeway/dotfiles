@@ -3,7 +3,6 @@
 source $HOME/.bin/git-completion.sh
 
 ### path
-
 pathmunge () {
   if ! echo $PATH | egrep -q "(^|:)$1($|:)" ; then
     if [ "$2" = "after" ] ; then
@@ -22,7 +21,6 @@ pathmunge $HOME/.rvm/bin after
 pathmunge $HOME/.cask/bin after
 
 ### variables
-
 export DISPLAY=:0.0
 
 if [[ $(uname) == Darwin ]]; then
@@ -38,11 +36,9 @@ export HISTFILESIZE=20000
 
 source $HOME/.bashrc.aliases
 source $HOME/.bashrc.prompt
-
 source $HOME/.rvm/scripts/rvm # load rvm
 
 ### local config settings, if any
-
 if [ -e $HOME/.bashrc.local ]; then
   source $HOME/.bashrc.local
 fi
