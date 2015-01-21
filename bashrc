@@ -41,8 +41,6 @@ source $HOME/.bashrc.prompt
 
 source $HOME/.rvm/scripts/rvm # load rvm
 
-complete -o bashdefault -o default -o nospace -F _git g
-
 ### local config settings, if any
 
 if [ -e $HOME/.bashrc.local ]; then
