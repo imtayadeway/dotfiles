@@ -22,9 +22,7 @@
         "\\Capfile$"
         "\\Gemfile$"
         "\\Guardfile$"
-        "\\Rakefile$"
-        "\\Vagrantfile$"
-        "\\Vagrantfile.local$"))
+        "\\Rakefile$"))
 
 (dolist (file-regexp files-in-ruby-mode)
   (add-to-list 'auto-mode-alist `(,file-regexp . ruby-mode)))
