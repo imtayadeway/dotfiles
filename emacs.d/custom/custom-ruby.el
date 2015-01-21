@@ -17,9 +17,9 @@
             (define-key ruby-mode-map (kbd "C-c C-c") 'xmp)))
 
 (setq files-in-ruby-mode
-      '("\\Gemfile$"
-        "\\.rake$"
+      '("\\.rake$"
         "\\.gemspec$"
+        "\\Capfile$"
         "\\Gemfile$"
         "\\Guardfile$"
         "\\Rakefile$"
