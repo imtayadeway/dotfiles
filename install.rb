@@ -4,6 +4,7 @@ files = [
   'bash_profile',
   'bashrc',
   'bashrc.aliases',
+  'bashrc.prompt',
   'bin',
   'emacs.d',
   'gemrc',

@@ -1,0 +1,5 @@
+### autocompletion for git aliases
+_git_rmb()
+{
+    _git_branch
+}

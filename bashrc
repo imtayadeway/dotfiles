@@ -37,14 +37,9 @@ export LC_CTYPE="en_US.UTF-8"
 export HISTFILESIZE=20000
 
 source $HOME/.bashrc.aliases
+source $HOME/.bashrc.prompt
 
 source $HOME/.rvm/scripts/rvm # load rvm
-
-### autocompletion for git aliases
-_git_rmb()
-{
-    _git_branch
-}
 
 complete -o bashdefault -o default -o nospace -F _git g
 
