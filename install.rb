@@ -14,7 +14,6 @@ files = [
   'offlineimaprc',
   'offlineimap.py',
   'rspec',
-  'rubocop.yml'
 ]
 
 files.each do |file|
