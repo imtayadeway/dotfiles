@@ -29,6 +29,9 @@
 ;; expand-region
 (global-set-key (kbd "C-'") 'er/expand-region)
 
+;; toggle quotes
+(global-set-key (kbd "C-\"") 'toggle-quotes)
+
 ;; ace window
 (global-set-key (kbd "C-c w") 'ace-window)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
