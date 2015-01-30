@@ -41,6 +41,7 @@
 (depends-on "rvm")
 (depends-on "sass-mode")
 (depends-on "scss-mode")
+(depends-on "toggle-quotes")
 (depends-on "web-mode")
 (depends-on "wrap-region")
 (depends-on "yaml-mode")
