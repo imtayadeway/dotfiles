@@ -101,12 +101,12 @@ if [[ $(uname) == Darwin ]]; then
     alias agi="brew install"
     alias agr="brew rm"
     alias acs="brew search"
-    alias agu="brew update && brew upgrade"
+    alias agu="brew update"
 else
     alias agi="sudo apt-get install"
     alias agr="sudo apt-get remove"
     alias acs="apt-cache search"
-    alias agu="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade"
+    alias agu="sudo apt-get update"
 fi
 
 ### Meta
