@@ -14,6 +14,7 @@ files = [
   'offlineimaprc',
   'offlineimap.py',
   'rspec',
+  'vimrc',
 ]
 
 files.each do |file|
