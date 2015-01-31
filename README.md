@@ -3,7 +3,7 @@ dotfiles
 
 Here's my collection of dotfiles. I originally started from scratch, but then plundered large sections of [hrs]'s, so a big shout-out to Harry Schwartz (thanks, Harry!).
 
-Also, I stole [Ben Orenstein]'s vimrc. Yoink!
+Also, I stole [Ben Orenstein]'s vimrc (and quite a few aliases too). Yoink!
 
 I probably wouldn't recommend that anyone else use mine, but nonetheless:
 
