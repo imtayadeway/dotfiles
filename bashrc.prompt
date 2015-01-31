@@ -5,3 +5,4 @@ _git_rmb()
 }
 
 __git_complete gco _git_checkout
+__git_complete g _git
