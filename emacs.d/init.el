@@ -52,12 +52,13 @@
 
 ;; color-theme and choco
 (add-to-list 'load-path "~/.emacs.d/themes/choco")
-(require 'color-theme)
-(require 'color-theme-choco)
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     (color-theme-choco)))
+(if window-system
+    (require 'color-theme)
+  (require 'color-theme-choco)
+  (eval-after-load "color-theme"
+    '(progn
+       (color-theme-initialize)
+       (color-theme-choco))))
 
 ;; whitespace
 (require 'whitespace)
