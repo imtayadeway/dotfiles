@@ -17,6 +17,10 @@ files = [
   'vimrc',
 ]
 
+if File.exists?(File.expand_path('~/.bash_profile'))
+  File.delete(File.expand_path('~/.bash_profile'))
+end
+
 files.each do |file|
   target_file = File.expand_path("~/.#{ file }")
   source_file = File.expand_path("~/.dotfiles/#{ file }")
@@ -32,10 +36,6 @@ files.each do |file|
     puts "linking #{ target_file }"
     File.symlink(source_file, target_file)
   end
-end
-
-if File.exists?(File.expand_path('~/.bash_profile'))
-  File.delete(File.expand_path('~/.bash_profile'))
 end
 
 File.symlink(File.expand_path('~/.bashrc'), File.expand_path('~/.bash_profile'))
