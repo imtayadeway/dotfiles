@@ -41,6 +41,9 @@
 ;; allow 20MB of memory (instead of 0.76MB) before calling GC
 (setq gc-cons-threshold 20000000)
 
+;; increase undo limit
+(setq undo-limit 3600)
+
 ;; treat camelcase as separate words
 (add-hook 'prog-mode-hook 'subword-mode)
 
