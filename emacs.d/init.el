@@ -52,7 +52,7 @@
 
 ;; color-theme and choco
 (add-to-list 'load-path "~/.emacs.d/themes/choco")
-(if window-system
+(when (display-graphic-p)
     (require 'color-theme)
   (require 'color-theme-choco)
   (eval-after-load "color-theme"
