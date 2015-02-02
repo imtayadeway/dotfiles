@@ -17,25 +17,28 @@ files = [
   'vimrc',
 ]
 
-if File.exists?(File.expand_path('~/.bash_profile'))
+if File.exist?(File.expand_path('~/.bash_profile'))
   File.delete(File.expand_path('~/.bash_profile'))
 end
 
-files.each do |file|
-  target_file = File.expand_path("~/.#{ file }")
-  source_file = File.expand_path("~/.dotfiles/#{ file }")
+def source(file)
+  File.expand_path("~/.#{ file }")
+end
 
-  if File.exists?(target_file)
-    print "skipping #{ target_file }: "
-    if File.symlink?(target_file)
+def target(file)
+  File.expand_path("~/.dotfiles/#{ file }")
+end
+
+files.each do |file|
+  if File.exist?(target(file))
+    print "skipping #{ target(file) }: "
+    if File.symlink?(target(file))
       puts "already linked"
     else
       puts "file already exists. delete or move before reinstalling."
     end
   else
-    puts "linking #{ target_file }"
+    puts "linking #{ target(file) }"
     File.symlink(source_file, target_file)
   end
 end
-
-File.symlink(File.expand_path('~/.bashrc'), File.expand_path('~/.bash_profile'))
