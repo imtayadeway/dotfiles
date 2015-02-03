@@ -115,5 +115,5 @@ else
 fi
 
 ### Meta
-alias bashrc="$EDITOR ~/.bashrc"
-alias bashrcs="source ~/.bashrc"
+alias brc="$EDITOR ~/.bashrc"
+alias brcs="source ~/.bashrc"
