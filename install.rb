@@ -25,7 +25,7 @@ end
 
 def try_linking(file)
   if File.exist?(target(file))
-    print "skipping #{ target(file) }: #{ skip_reason(target(file)) }"
+    puts "skipping #{ target(file) }: #{ skip_reason(target(file)) }"
   else
     puts "linking #{ target(file) }"
     File.symlink(source(file), target(file))
