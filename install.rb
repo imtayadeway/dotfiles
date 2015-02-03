@@ -1,23 +1,12 @@
 def main
-  if File.exist?(File.expand_path('~/.bash_profile'))
-    File.delete(File.expand_path('~/.bash_profile'))
-  end
-
-  files.each do |file|
-    if File.exist?(target(file))
-      print "skipping #{ target(file) }: #{ skip_reason(target(file)) }"
-    else
-      puts "linking #{ target(file) }"
-      File.symlink(source(file), target(file))
-    end
-  end
+  dotfiles.each { |file| try_linking(file) }
+  link_bashrc
 end
 
-def files
+def dotfiles
   [
     "ackrc",
     "agignore",
-    "bash_profile",
     "bashrc",
     "bashrc.aliases",
     "bashrc.prompt",
@@ -34,6 +23,15 @@ def files
   ]
 end
 
+def try_linking(file)
+  if File.exist?(target(file))
+    print "skipping #{ target(file) }: #{ skip_reason(target(file)) }"
+  else
+    puts "linking #{ target(file) }"
+    File.symlink(source(file), target(file))
+  end
+end
+
 def source(file)
   File.expand_path("~/.#{ file }")
 end
@@ -48,6 +46,18 @@ def skip_reason(file)
   else
     "file already exists. delete or move before reinstalling."
   end
+end
+
+def path_for(file)
+  File.expand_path(file)
+end
+
+def link_bashrc
+  if File.exist?(path_for("~/.bash_profile"))
+    File.delete(path_for("~/.bash_profile"))
+  end
+
+  File.symlink(path_for('~/.bashrc'), path_for('~/.bash_profile'))
 end
 
 main
