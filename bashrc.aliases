@@ -57,6 +57,7 @@ alias guard="bundle exec guard"
 alias hpush="git push heroku master"
 alias irb="irb --readline -r irb/completion"
 alias js="jekyll serve"
+alias killemacs="emacsclient -e '(kill-emacs)'"
 alias killruby='killall -9 ruby'
 alias la="ls -la"
 alias less="less -R" # display colors correctly
