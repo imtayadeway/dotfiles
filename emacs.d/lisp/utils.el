@@ -1,3 +1,8 @@
+(defun tw/list-buffers-and-switch ()
+  (interactive)
+  (list-buffers)
+  (other-window 1))
+
 (defun move-line-up ()
   (interactive)
   (transpose-lines 1)
