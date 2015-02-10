@@ -1,4 +1,4 @@
 # -*- mode: snippet -*-
 # name: allow(...).to receive(...) { ... }
 # --
-allow($2).to receive($1) { $0 }
+allow($1).to receive($2) { $0 }
