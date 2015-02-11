@@ -72,7 +72,7 @@
 (setq require-final-newline t)
 
 ;; snippets
-(setq yas-snippet-dirs '("~/.emacs.d/snippets/text-mode"))
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 (yas-global-mode 1)
 
 ;; use projectile everywhere
