@@ -44,5 +44,6 @@
 (depends-on "toggle-quotes")
 (depends-on "web-mode")
 (depends-on "wrap-region")
+(depends-on "writegood-mode")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
