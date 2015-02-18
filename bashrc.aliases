@@ -93,7 +93,13 @@ alias r="rails"
 alias rc="rails console"
 alias reguard="bin/spring stop && guard"
 alias respring="bin/spring stop"
-alias retag="rm -f TAGS; ctags -a -e -f TAGS --tag-relative -R --exclude=.git --exclude=log --exclude=tmp *"
+
+if [[ $(uname) == Darwin ]]; then
+    alias retag="rm -f TAGS; ctags -a -e -f TAGS --tag-relative -R --exclude=.git --exclude=log --exclude=tmp *"
+else
+    alias retag="rm -f TAGS; ctags-exuberant -a -e -f TAGS --tag-relative -R app lib vendor"
+fi
+
 alias rr="rake routes"
 alias rs="rails server"
 alias s="bundle exec rspec"
