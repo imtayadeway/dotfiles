@@ -60,8 +60,3 @@
   (interactive)
   (let ((fill-column (point-max)))
     (fill-paragraph nil)))
-
-(defun beautify-json ()
-  (interactive)
-  (save-excursion
-    (shell-command-on-region (mark) (point) "jsonpp" (buffer-name) t)))
