@@ -113,6 +113,7 @@ alias u='cd ..'
 alias unb="tar xjvf"
 alias ung="tar xzvf"
 alias usage="du -sch"
+alias vi="vim"
 
 ### Package management
 if [[ $(uname) == Darwin ]]; then
