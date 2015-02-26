@@ -28,11 +28,11 @@
   ird = !git rebase -i origin/develop
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
-  mu = !git fetch upstream && git merge upstream/master
   pl = pull
   ps = push
   psf = push --force
   pp = !git pull && git push
+  pu = !git fetch upstream && git merge upstream/master
   rb = rebase
   rba = rebase --abort
   rbc = rebase --continue
