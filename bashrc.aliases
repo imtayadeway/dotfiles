@@ -59,6 +59,7 @@ alias gst="git status"
 alias guard="bundle exec guard"
 alias hpush="git push heroku master"
 alias irb="irb --readline -r irb/completion"
+alias j="bundle exec guard-jasmine"
 alias js="jekyll serve"
 alias killemacs="emacsclient -e '(kill-emacs)'"
 alias killruby='killall -9 ruby'
