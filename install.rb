@@ -20,6 +20,7 @@ def dotfiles
     "offlineimaprc",
     "offlineimap.py",
     "rspec",
+    "tmux.conf",
     "vimrc",
   ]
 end
