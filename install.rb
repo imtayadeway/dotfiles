@@ -10,6 +10,7 @@ def dotfiles
     "bashrc",
     "bashrc.aliases",
     "bashrc.prompt",
+    "bashrc.utils",
     "bin",
     "emacs.d",
     "gemrc",

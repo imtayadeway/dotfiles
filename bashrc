@@ -30,6 +30,7 @@ export HISTFILESIZE=20000
 
 source $HOME/.bashrc.aliases
 source $HOME/.bashrc.prompt
+source $HOME/.bashrc.utils
 source $HOME/.rvm/scripts/rvm # load rvm
 
 ### local config settings, if any
