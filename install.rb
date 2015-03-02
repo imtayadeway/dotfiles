@@ -34,11 +34,11 @@ def try_linking(file)
 end
 
 def source(file)
-  File.expand_path("~/.#{ file }")
+  File.expand_path("~/.dotfiles/#{ file }")
 end
 
 def target(file)
-  File.expand_path("~/.dotfiles/#{ file }")
+  File.expand_path("~/.#{ file }")
 end
 
 def skip_reason(file)
