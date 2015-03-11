@@ -11,7 +11,7 @@
             (ruby-refactor-mode)
             (flycheck-mode)
             (global-set-key (kbd "C-c C-f") 'rinari-find-file-in-project)
-            (global-set-key (kbd "C-c C-h") 'ruby-toggle-hash-syntax)
+            (global-set-key (kbd "C-c h") 'ruby-toggle-hash-syntax)
             (setq rinari-tags-file-name "TAGS")
             (projectile-rails-mode)
             (local-set-key "\r" 'newline-and-indent)
