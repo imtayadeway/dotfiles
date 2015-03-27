@@ -34,6 +34,9 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/custom")
 
+;; exec path
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 (setq exec-path (append exec-path '("/usr/local/bin")))
 
 (require 'multi-term)
