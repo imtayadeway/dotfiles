@@ -5,6 +5,7 @@
 
 (depends-on "ace-jump-mode")
 (depends-on "ace-window")
+(depends-on "ag")
 (depends-on "bundler")
 (depends-on "cider")
 (depends-on "coffee-mode")
