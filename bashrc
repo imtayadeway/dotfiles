@@ -19,6 +19,7 @@ pathmunge /usr/local/heroku/bin
 pathmunge /sbin after
 pathmunge $HOME/.rvm/bin after
 pathmunge $HOME/.cask/bin after
+pathmunge $HOME/.bin after
 
 ### variables
 export DISPLAY=:0.0
