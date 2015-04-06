@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: {}.with_indifferent_access
+# key: hwia
+# --
+{}.with_indifferent_access
