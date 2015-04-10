@@ -16,6 +16,7 @@
   cob = checkout -b
   cod = checkout develop
   com = checkout master
+  ctags = !.git/hooks/ctags
   dc = diff --cached
   dd = diff develop
   df = diff
@@ -57,3 +58,5 @@
   ff = only
 [branch]
   autosetuprebase = always
+[init]
+	templatedir = ~/.git_template
