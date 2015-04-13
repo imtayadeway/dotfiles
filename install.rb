@@ -17,7 +17,6 @@ def dotfiles
     "gitconfig",
     "gitignore",
     "gitmessage",
-    "git_template",
     "offlineimaprc",
     "offlineimap.py",
     "rspec",

@@ -58,5 +58,3 @@
   ff = only
 [branch]
   autosetuprebase = always
-[init]
-	templatedir = ~/.git_template
