@@ -2,3 +2,5 @@
 #*
 .#*
 TAGS
+.projectile
+vendor/bundle
