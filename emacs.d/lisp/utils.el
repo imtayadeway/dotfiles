@@ -14,6 +14,16 @@
   (transpose-lines 1)
   (forward-line -1))
 
+(defun move-paragraph-up ()
+  (interactive)
+  (forward-paragraph -1)
+  (transpose-paragraphs 1)
+  (forward-paragraph -1))
+
+(defun move-paragraph-down()
+  (interactive)
+  (transpose-paragraphs 1))
+
 (defun date ()
   (interactive)
   (insert (format-time-string "%Y-%m-%d")))
