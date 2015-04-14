@@ -35,4 +35,4 @@
 (global-set-key (kbd "C-'") 'er/expand-region)
 
 ;; toggle quotes
-(global-set-key (kbd "C-\"") 'toggle-quotes)
+(global-set-key (kbd "C-M-'") 'toggle-quotes)
