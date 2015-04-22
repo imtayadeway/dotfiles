@@ -1,5 +1,7 @@
-[include]
-  path = ~/.gitconfig.local
+[user]
+  name = Tim Wade
+  email = hello@timjwade.com
+  signingkey = 535435FD
 [alias]
   a = add
   aa = !git add -u && git add . && git status
