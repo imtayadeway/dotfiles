@@ -50,6 +50,7 @@
   ui = true
 [commit]
   template = ~/.gitmessage
+  gpgsign = true
 [core]
   excludesfile = ~/.gitignore
 [push]
