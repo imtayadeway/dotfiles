@@ -2,7 +2,7 @@
 (require 'rcodetools)
 
 (add-hook 'ruby-mode-hook
-(lambda ()
+          (lambda ()
             (rvm-activate-corresponding-ruby)
             (setq ruby-insert-encoding-magic-comment nil)
             (rinari-minor-mode)
