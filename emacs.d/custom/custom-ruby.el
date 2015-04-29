@@ -10,6 +10,7 @@
             (ruby-end-mode)
             (ruby-refactor-mode)
             (flycheck-mode)
+            (rubocop-mode)
             (global-set-key (kbd "C-c C-f") 'rinari-find-file-in-project)
             (global-set-key (kbd "C-c h") 'ruby-toggle-hash-syntax)
             (setq rinari-tags-file-name "TAGS")
