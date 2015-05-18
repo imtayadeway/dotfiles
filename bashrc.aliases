@@ -117,6 +117,7 @@ alias track="git checkout -t"
 alias tree="tree -C" # add colors
 alias u='cd ..'
 alias unb="tar xjvf"
+alias undeployed='git fetch --multiple production origin && git log production/master..origin/master'
 alias ung="tar xzvf"
 alias usage="du -sch"
 alias vi="vim"
