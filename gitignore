@@ -4,3 +4,4 @@
 TAGS
 .projectile
 vendor/bundle
+vendor/cache
