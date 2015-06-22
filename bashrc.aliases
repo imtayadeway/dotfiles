@@ -77,6 +77,7 @@ else
     alias ls="ls --color -h"
 fi
 
+alias loc="wc -l * | sort -n"
 alias mkdir="mkdir -p"
 
 if [[ $(uname) == Darwin ]]; then
