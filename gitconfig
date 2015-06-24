@@ -33,8 +33,9 @@
   loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
   pl = pull
   ps = push
-  psf = push --force
   pp = !git pull && git push
+  praise = blame
+  psf = push --force
   pu = !git fetch upstream && git merge upstream/master
   rb = rebase
   rba = rebase --abort
