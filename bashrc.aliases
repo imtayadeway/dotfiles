@@ -102,10 +102,10 @@ else
     alias retag="rm -f TAGS; ctags-exuberant -a -e -f TAGS --tag-relative -R app lib vendor"
 fi
 
-alias rk="rake"
-alias rr="rake routes"
+alias rk="bundle exec rake"
+alias rr="bundle exec rake routes"
 alias rs="rails server"
-alias rt="rake -T"
+alias rt="bundle exec rake -T"
 alias s="bundle exec rspec --format progress"
 alias sff="bundle exec rspec --format progress --fail-fast"
 alias src="cd ~/src"
