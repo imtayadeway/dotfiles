@@ -16,11 +16,9 @@
   cm = commit -m
   co = checkout
   cob = checkout -b
-  cod = checkout develop
   com = checkout master
   ctags = !.git/hooks/ctags
   dc = diff --cached
-  dd = diff develop
   df = diff
   dm = diff master
   done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
@@ -28,7 +26,6 @@
   gr = grep -n
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   ir = !git rebase -i origin/master
-  ird = !git rebase -i origin/develop
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
   pl = pull
@@ -46,7 +43,6 @@
   st = status
   su = submodule update --init --recursive
   up = !git fetch origin && git rebase origin/master
-  upd = !git fetch origin && git rebase origin/develop
   who = shortlog -n -s --no-merges
   wip = !git add -A && git commit -m "wip"
 [color]
