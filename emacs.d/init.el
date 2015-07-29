@@ -74,6 +74,7 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq-default indent-tabs-mode nil)
 (setq require-final-newline t)
+(setq whitespace-line-column 120)
 
 ;; snippets
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
