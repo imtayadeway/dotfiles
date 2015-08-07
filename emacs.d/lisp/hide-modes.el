@@ -7,7 +7,6 @@
              (lambda () (setq mode-name ,abbrev))))
 
 (diminish-minor-mode 'flycheck 'flycheck-mode)
-(diminish-minor-mode 'magit 'magit-auto-revert-mode)
 (diminish-minor-mode 'projectile 'projectile-mode)
 (diminish-minor-mode 'rinari-minor 'rinari-minor-mode)
 (diminish-minor-mode 'yasnippet 'yas-minor-mode)
