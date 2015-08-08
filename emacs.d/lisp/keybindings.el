@@ -7,7 +7,7 @@
 (global-set-key (kbd "C-c m") 'mu4e)
 (global-set-key (kbd "C-c d") 'date)
 (global-set-key (kbd "C-c i") 'open-index-file)
-(global-set-key (kbd "C-c j") 'ace-jump-mode)
+(global-set-key (kbd "C-c j") 'avy-goto-word-or-subword-1)
 (global-set-key (kbd "C-c t") 'time)
 (global-set-key (kbd "C-c w") 'ace-window)
 (global-set-key (kbd "C-x C-b") 'tw/list-buffers-and-switch)
