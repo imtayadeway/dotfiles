@@ -104,9 +104,10 @@ else
 fi
 
 alias rk="bundle exec rake"
-alias rr="bundle exec rake routes"
+alias rkr="bundle exec rake routes"
+alias rkt="bundle exec rake -T"
+alias rr="bundle exec rails runner"
 alias rs="bundle exec rails server"
-alias rt="bundle exec rake -T"
 alias rube="ruby"
 alias s="bundle exec rspec --format progress"
 alias scratch="cd ~/src/scratch"
