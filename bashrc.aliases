@@ -76,6 +76,7 @@ else
 fi
 
 alias loc="wc -l * | sort -n"
+alias miq="cd ~/src/manageiq"
 alias mkdir="mkdir -p"
 
 if [[ $(uname) == Darwin ]]; then
