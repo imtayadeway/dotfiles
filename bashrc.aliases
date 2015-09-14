@@ -105,6 +105,7 @@ else
     alias retag="rm -f TAGS; ctags-exuberant -a -e -f TAGS --tag-relative -R app lib vendor"
 fi
 
+alias rg="bundle exec rails generate"
 alias rk="bundle exec rake"
 alias rkr="bundle exec rake routes"
 alias rkt="bundle exec rake -T"
