@@ -6,6 +6,7 @@
 ;; full screen
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
+(toggle-frame-fullscreen)
 
 ;; welcome screen
 (setq inhibit-startup-message t)
