@@ -1,7 +1,7 @@
 ;; use projectile everywhere
 (projectile-global-mode)
 
-(setq projectile-tags-command "ctags -Re -f \"%s\" --exclude=.git --exclude=tmp --exclude=log")
+(setq projectile-tags-command "ctags -Re -f \"%s\" --languages=-javascript --exclude=.git --exclude=tmp --exclude=log")
 
 ;; persp-projectile
 (persp-mode)
