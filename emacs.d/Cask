@@ -3,9 +3,9 @@
 (source marmalade)
 (source melpa)
 
+(depends-on "ace-jump-mode")
 (depends-on "ace-window")
 (depends-on "ag")
-(depends-on "avy")
 (depends-on "bundler")
 (depends-on "cask")
 (depends-on "chruby")
