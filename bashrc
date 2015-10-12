@@ -36,7 +36,7 @@ source $HOME/.bashrc.prompt
 source $HOME/.bashrc.utils
 source "/usr/local/share/chruby/chruby.sh"
 source "/usr/local/share/chruby/auto.sh"
-chruby 2.2.2
+chruby 2.2.3
 
 ### local config settings, if any
 if [ -e $HOME/.bashrc.local ]; then
