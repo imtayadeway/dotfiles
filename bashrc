@@ -29,6 +29,7 @@ export LANG="en_US"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 export HISTFILESIZE=20000
+export TERM="xterm-256color"
 
 source $HOME/.bashrc.aliases
 source $HOME/.bashrc.prompt
