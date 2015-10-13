@@ -22,6 +22,7 @@ def dotfiles
     "rspec",
     "tmux.conf",
     "vimrc",
+    "Xmodmap",
   ]
 end
 
