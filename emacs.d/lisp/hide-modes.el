@@ -8,7 +8,6 @@
 
 (diminish-minor-mode 'flycheck 'flycheck-mode)
 (diminish-minor-mode 'projectile 'projectile-mode)
-(diminish-minor-mode 'rinari-minor 'rinari-minor-mode)
 (diminish-minor-mode 'yasnippet 'yas-minor-mode)
 (diminish-minor-mode 'whitespace 'whitespace-mode)
 

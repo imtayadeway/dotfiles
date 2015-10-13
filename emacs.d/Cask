@@ -54,7 +54,6 @@
 (depends-on "rainbow-mode")
 (depends-on "rake")
 (depends-on "rhtml-mode")
-(depends-on "rinari")
 (depends-on "rspec-mode")
 (depends-on "rubocop")
 (depends-on "ruby-compilation")
