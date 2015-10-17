@@ -60,81 +60,10 @@ runtime macros/matchit.vim
 
 let mapleader = ","
 
-map <Leader>ac :sp app/controllers/application_controller.rb<cr>
-vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
-map <Leader>bb :!bundle install<cr>
-nmap <Leader>bi :source ~/.vimrc<cr>:PluginInstall<cr>
-vmap <Leader>bed "td?describe<cr>obed<tab><esc>"tpkdd/end<cr>o<esc>:nohl<cr>
-map <Leader>cc :!cucumber --drb %<CR>
-map <Leader>cu :Tabularize /\|<CR>
-map <Leader>co ggVG"*y
-map <Leader>cc :Rjcollection client/
-map <Leader>cj :Rjspec client/
-map <Leader>cm :Rjmodel client/
-map <Leader>cs :call SearchForCallSitesCursor()<CR>
-map <Leader>ct :Rtemplate client/
-map <Leader>cv :Rjview client/
-map <Leader>d orequire 'pry'<cr>binding.pry<esc>:w<cr>
-map <Leader>dr :e ~/Dropbox<cr>
-map <Leader>ec :e ~/src/
-map <Leader>g :Start gitsh<cr>
-map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
-map <Leader>f :call OpenFactoryFile()<CR>
-map <Leader>fix :cnoremap % %<CR>
-map <Leader>fa :sp test/factories.rb<CR>
 map <Leader>h :CommandT<CR>
-map <Leader>i mmgg=G`m<CR>
-map <Leader>l oconsole.log 'debugging'<esc>:w<cr>
-map <Leader>m :Rmodel
-map <Leader>o :w<cr>:call RunNearestSpec()<CR>
-map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
-map <Leader>ra :%s/
 map <Leader>rd :!bundle exec rspec % --format documentation<CR>
 map <Leader>rf :CommandTFlush<CR>:CommandT<CR>
-map <Leader>rs :vsp <C-r>#<cr><C-w>w
-map <Leader>rt q:?!ruby<cr><cr>
-map <Leader>rw :%s/\s\+$//<cr>:w<cr>
-map <Leader>sc :sp db/schema.rb<cr>
-map <Leader>sg :sp<cr>:grep<space>
-map <Leader>sj :call OpenJasmineSpecInBrowser()<cr>
-map <Leader>sm :RSmodel
-map <Leader>sp yss<p>
-map <Leader>sn :e ~/.vim/snippets/ruby.snippets<CR>
-map <Leader>so :so %<cr>
-map <Leader>sq j<c-v>}klllcs<esc>:wq<cr>
-map <Leader>ss ds)i <esc>:w<cr>
-map <Leader>st :!ruby -Itest % -n "//"<left><left>
-map <Leader>su :RSunittest
-map <Leader>sv :RSview
 map <Leader>t :w<cr>:call RunCurrentSpecFile()<CR>
-map <Leader>y :!rspec --drb %<cr>
-map <Leader>u :Runittest<cr>
-map <Leader>vc :RVcontroller<cr>
-map <Leader>vf :RVfunctional<cr>
-map <Leader>vg :vsp<cr>:grep
-map <Leader>vi :tabe ~/.vimrc<CR>
-map <Leader>vu :RVunittest<CR>
-map <Leader>vm :RVmodel<cr>
-map <Leader>vv :RVview<cr>
-map <Leader>w <C-w>w
-map <Leader>x :exec getline(".")<cr>
-
-" Edit another file in the same directory as the current file
-" uses expression to extract path from current file's path
-map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
-map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
-map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
-
-map <C-h> :nohl<cr>
-imap <C-l> :<Space>
-" Note that remapping C-s requires flow control to be disabled
-" (e.g. in .bashrc or .zshrc)
-map <C-s> <esc>:w<CR>
-imap <C-s> <esc>:w<CR>
-map <C-t> <esc>:tabnew<CR>
-map <C-x> <C-w>c
-map <C-n> :cn<CR>
-map <C-p> :cp<CR>
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
