@@ -12,11 +12,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " My bundles
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'koron/nyancat-vim'
-Plugin 'skwp/greplace.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-bundler'
@@ -30,16 +27,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wincent/Command-T'
-
-" nelstrom's plugin depends on kana's
-Plugin 'kana/vim-textobj-user'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-
-" Clojure
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-classpath'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-leiningen'
 
 " Colors
 Plugin 'nanotech/jellybeans.vim'
@@ -65,10 +52,6 @@ augroup myfiletypes
   autocmd FileType ruby,eruby,yaml setlocal colorcolumn=80
   " Make ?s part of words
   autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?
-
-  " Clojure
-  autocmd FileType clojure setlocal colorcolumn=80
-  autocmd FileType clojure map <Leader>t :!lein test %<cr>
 augroup END
 
 " Enable built-in matchit plugin
