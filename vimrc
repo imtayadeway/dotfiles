@@ -13,18 +13,12 @@ Plugin 'gmarik/Vundle.vim'
 
 " My bundles
 Plugin 'ervandew/supertab'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-cucumber'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wincent/Command-T'
 
@@ -43,37 +37,14 @@ colorscheme jellybeans
 " ========================================================================
 syntax on                 " Enable syntax highlighting
 
-augroup myfiletypes
-  " Clear old autocmds in group
-  autocmd!
-  " autoindent with two spaces, always expand tabs
-  autocmd FileType ruby,eruby,yaml setlocal ai sw=2 sts=2 et
-  autocmd FileType ruby,eruby,yaml setlocal path+=lib
-  autocmd FileType ruby,eruby,yaml setlocal colorcolumn=80
-  " Make ?s part of words
-  autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?
-augroup END
-
-" Enable built-in matchit plugin
-runtime macros/matchit.vim
-" ================
-
 let mapleader = ","
 
 map <Leader>h :CommandT<CR>
-map <Leader>rd :!bundle exec rspec % --format documentation<CR>
-map <Leader>rf :CommandTFlush<CR>:CommandT<CR>
 map <Leader>t :w<cr>:call RunCurrentSpecFile()<CR>
 
-" Emacs-like beginning and end of line.
-imap <c-e> <c-o>$
-imap <c-a> <c-o>^
-
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set history=500		" keep 500 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
-set autoindent
 set showmatch
 set nowrap
 set backupdir=~/.tmp
@@ -81,8 +52,6 @@ set directory=~/.tmp " Don't clutter my dirs up with swp and tmp files
 set autoread
 set wmh=0
 set viminfo+=!
-set guioptions-=T
-set guifont=Triskweline_10:h10
 set et
 set sw=2
 set smarttab
@@ -97,9 +66,6 @@ set bg=light
 " Set the tag file search order
 set tags=./tags;
 
-" Use _ as a word-separator
-" set iskeyword-=_
-
 " Use Silver Searcher instead of grep
 set grepprg=ag
 
@@ -112,24 +78,9 @@ let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;
 " Highlight the status line
 highlight StatusLine ctermfg=blue ctermbg=yellow
 
-" Format xml files
-au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
-
 set shiftround " When at 3 spaces and I hit >>, go to 4, not 5.
 
 set nofoldenable " Say no to code folding...
-
-command! Q q " Bind :Q to :q
-command! Qall qall
-command! QA qall
-command! E e
-
-
-" Disable Ex mode
-map Q <Nop>
-
-" Disable K looking stuff up
-map K <Nop>
 
 au BufNewFile,BufRead *.txt setlocal nolist " Don't display whitespace
 
@@ -143,45 +94,6 @@ set noesckeys
 set ttimeout
 set ttimeoutlen=1
 
-" Turn on spell-checking in markdown and text.
-" au BufRead,BufNewFile *.md,*.txt setlocal spell
-
-" Merge a tab into a split in the previous window
-function! MergeTabs()
-  if tabpagenr() == 1
-    return
-  endif
-  let bufferName = bufname("%")
-  if tabpagenr("$") == tabpagenr()
-    close!
-  else
-    close!
-    tabprev
-  endif
-  split
-  execute "buffer " . bufferName
-endfunction
-
-nmap <C-W>u :call MergeTabs()<CR>
-
-
-" Squash all commits into the first during rebase
-function! SquashAll()
-  normal ggj}klllcf:w
-endfunction
-
-
-function! SearchForCallSitesCursor()
-  let searchTerm = expand("<cword>")
-  call SearchForCallSites(searchTerm)
-endfunction
-
-" Search for call sites for term (excluding its definition) and
-" load into the quickfix list.
-function! SearchForCallSites(term)
-  cexpr system('ag ' . shellescape(a:term) . '\| grep -v def')
-endfunction
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Test-running stuff
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -191,12 +103,6 @@ endfunction
 let g:rspec_command = "Dispatch rspec {spec}"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-inoremap <Tab> <C-P>
-
-" Let's be reasonable, shall we?
-nmap k gk
-nmap j gj
 
 let g:CommandTMaxHeight=50
 let g:CommandTMatchWindowAtTop=1
@@ -208,30 +114,8 @@ set timeoutlen=500
 " Remove trailing whitespace on save for ruby files.
 au BufWritePre *.rb :%s/\s\+$//e
 
-function! OpenFactoryFile()
-  if filereadable("test/factories.rb")
-    execute ":sp test/factories.rb"
-  else
-    execute ":sp spec/factories.rb"
-  end
-endfunction
-
 " Set gutter background to black
 highlight SignColumn ctermbg=black
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" RENAME CURRENT FILE (thanks Gary Bernhardt)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        exec ':silent !rm ' . old_name
-        redraw!
-    endif
-endfunction
-map <Leader>n :call RenameFile()<cr>
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
