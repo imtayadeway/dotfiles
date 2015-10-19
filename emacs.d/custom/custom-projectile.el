@@ -7,3 +7,6 @@
 (persp-mode)
 (require 'persp-projectile)
 (define-key projectile-mode-map (kbd "s-s") 'projectile-persp-switch-project)
+
+;; use projectile-rails if it's a rails project
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
