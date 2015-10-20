@@ -1,6 +1,4 @@
 # -*- mode: snippet -*-
-# name: before do ... end
+# name: before { ... }
 # --
-before$1 do
-  $0
-end
+before$1 { $0 }
