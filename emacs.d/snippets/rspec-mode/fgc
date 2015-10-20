@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: FactoryGirl.create(:$1)
+# --
+FactoryGirl.create(:$1)
