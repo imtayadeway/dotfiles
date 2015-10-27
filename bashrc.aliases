@@ -28,6 +28,7 @@ alias dr="cd ~/Dropbox"
 alias dt="cd ~/Desktop"
 alias e=$EDITOR
 alias fucking="sudo"
+alias fs="bundle exec foreman start"
 alias g="git"
 alias ga="git add"
 alias gaa="git add -u && git add . && git status"
