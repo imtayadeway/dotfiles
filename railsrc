@@ -1,7 +1,8 @@
---skip-bundle
---skip-keeps
---skip-sprockets
 --database=postgresql
 --edge
+--skip-bundle
+--skip-keeps
+--skip-spring
+--skip-sprockets
 --skip-test-unit
 --skip-turbolinks
