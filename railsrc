@@ -4,3 +4,4 @@
 --database=postgresql
 --edge
 --skip-test-unit
+--skip-turbolinks
