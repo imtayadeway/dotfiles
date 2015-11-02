@@ -1,0 +1,6 @@
+--skip-bundle
+--skip-keeps
+--skip-sprockets
+--database=postgresql
+--edge
+--skip-test-unit

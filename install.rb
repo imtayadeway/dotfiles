@@ -19,6 +19,7 @@ def dotfiles
     "gitmessage",
     "offlineimaprc",
     "offlineimap.py",
+    "railsrc",
     "rspec",
     "tmux.conf",
     "vimrc",
