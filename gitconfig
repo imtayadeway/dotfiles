@@ -17,6 +17,7 @@
   co = checkout
   cob = checkout -b
   com = checkout master
+  cp = cherry-pick -x
   ctags = !.git/hooks/ctags
   dc = diff --cached
   df = diff
