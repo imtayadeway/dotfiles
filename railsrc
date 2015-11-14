@@ -3,6 +3,5 @@
 --skip-bundle
 --skip-keeps
 --skip-spring
---skip-sprockets
 --skip-test-unit
 --skip-turbolinks
