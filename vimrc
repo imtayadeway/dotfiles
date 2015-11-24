@@ -106,6 +106,7 @@ let g:rspec_command = "Dispatch rspec {spec}"
 
 let g:CommandTMaxHeight=50
 let g:CommandTMatchWindowAtTop=1
+let g:CommandTFileScanner="git"
 
 " Don't wait so long for the next keypress (particularly in ambigious Leader
 " situations.
