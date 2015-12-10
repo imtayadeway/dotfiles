@@ -1,11 +1,11 @@
-emacs.d/auto-save-list/**
-emacs.d/ido.last
-emacs.d/session.*
 emacs.d/.cask
-emacs.d/projectile-bookmarks.eld
 emacs.d/.org-id-locations
+emacs.d/auto-save-list/**
 emacs.d/bookmarks
-emacs.d/rake.cache
-emacs.d/projectile.cache
 emacs.d/elpa
+emacs.d/ido.last
+emacs.d/projectile-bookmarks.eld
+emacs.d/projectile.cache
+emacs.d/rake.cache
+emacs.d/session.*
 emacs.d/url
