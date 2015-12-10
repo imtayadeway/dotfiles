@@ -69,6 +69,7 @@ alias hpush="git push heroku master"
 alias irb="irb --readline -r irb/completion"
 alias j="bundle exec guard-jasmine"
 alias js="jekyll serve --drafts"
+alias jsonpp="python -m json.tool"
 alias killemacs="emacsclient -e '(kill-emacs)'"
 alias killruby='killall -9 ruby'
 alias la="ls -la"
