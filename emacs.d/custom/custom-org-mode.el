@@ -5,7 +5,7 @@
   (concat (file-name-as-directory directory) filename))
 
 (add-hook 'org-mode-hook
-	  (lambda ()
+          (lambda ()
             (flyspell-mode)
             (local-set-key (kbd "C-x s")
                            'org-insert-src-block)
