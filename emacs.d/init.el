@@ -6,7 +6,8 @@
 ;; full screen
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
-(toggle-frame-fullscreen)
+;; hack for toggling fullscreen after init
+(run-with-idle-timer 0.1 nil 'toggle-frame-fullscreen)
 
 ;; welcome screen
 (setq inhibit-startup-message t)
