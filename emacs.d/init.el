@@ -117,6 +117,3 @@
 
 ;; inf-ruby
 (add-hook 'after-init-hook 'inf-ruby-switch-setup) ;; for using pry in rspec mode
-
-;; dired
-(add-hook 'dired-mode-hook 'rspec-dired-mode)
