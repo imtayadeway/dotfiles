@@ -12,6 +12,7 @@ def dotfiles
     "bashrc.prompt",
     "bashrc.utils",
     "bin",
+    "config/redshift.conf",
     "emacs.d",
     "gemrc",
     "gitconfig",
