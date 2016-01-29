@@ -38,7 +38,7 @@
 (pallet-mode t)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/custom")
+(add-to-list 'load-path "~/.emacs.d/modes")
 
 ;; exec path
 (when (memq window-system '(mac ns))
@@ -58,7 +58,7 @@
 
 ;; mode-specific configuration
 (mapcar (lambda (mode-file-name) (load mode-file-name))
-        (directory-files "~/.emacs.d/custom/" nil ".el"))
+        (directory-files "~/.emacs.d/modes/" nil ".el"))
 
 (delete-selection-mode t)
 
