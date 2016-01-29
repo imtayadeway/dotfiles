@@ -5,7 +5,6 @@
 
 (dolist (hook lispy-mode-hooks)
   (add-hook hook (lambda ()
-                   (setq show-paren-style 'expression)
                    (paredit-mode)
                    (eldoc-mode)
                    (rainbow-delimiters-mode))))
