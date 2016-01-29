@@ -15,6 +15,9 @@
 ;; don't use dialogs
 (setq use-dialog-box nil)
 
+;; yes/no
+(fset 'yes-or-no-p 'y-or-n-p)
+
 ;; windows
 (windmove-default-keybindings)
 (winner-mode 1)
