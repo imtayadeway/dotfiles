@@ -6,6 +6,7 @@
 (global-set-key (kbd "C-c s") 'multi-term)
 (global-set-key (kbd "C-c m") 'mu4e)
 (global-set-key (kbd "C-c d") 'date)
+(global-set-key (kbd "C-c g") 'ag-project)
 (global-set-key (kbd "C-c i") 'open-index-file)
 (global-set-key (kbd "C-c j") 'ace-jump-mode)
 (global-set-key (kbd "C-c t") 'time)
