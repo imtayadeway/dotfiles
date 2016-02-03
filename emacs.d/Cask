@@ -59,7 +59,6 @@
 (depends-on "ruby-compilation")
 (depends-on "ruby-end")
 (depends-on "ruby-hash-syntax")
-(depends-on "ruby-refactor")
 (depends-on "s")
 (depends-on "sass-mode")
 (depends-on "scss-mode")
