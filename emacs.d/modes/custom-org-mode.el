@@ -48,6 +48,11 @@
          checkitem
          (file (org-file-path "groceries.org")))
 
+        ("j" "Journal"
+         entry
+         (file (construct-filename notes-directory "journal.org"))
+         "* %<%A %Y-%m-%d>\n  - %?")
+
         ("q" "Media queues")
 
         ("qf" "Films"
