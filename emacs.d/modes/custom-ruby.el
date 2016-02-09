@@ -9,6 +9,7 @@
             (ruby-refactor-mode)
             (flycheck-mode)
             (rubocop-mode)
+            (aggressive-indent-mode)
             (global-set-key (kbd "C-c h") 'ruby-toggle-hash-syntax)
             (local-set-key "\r" 'newline-and-indent)
             (define-key ruby-mode-map (kbd "C-c C-c") 'xmp)))
