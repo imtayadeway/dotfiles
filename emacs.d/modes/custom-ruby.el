@@ -6,7 +6,6 @@
             (setq ruby-insert-encoding-magic-comment nil)
             (yas-minor-mode)
             (ruby-end-mode)
-            (ruby-refactor-mode)
             (flycheck-mode)
             (rubocop-mode)
             (aggressive-indent-mode)
