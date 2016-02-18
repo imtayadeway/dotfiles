@@ -1,6 +1,4 @@
-(source "elpa" "http://tromey.com/elpa/")
 (source gnu)
-(source marmalade)
 (source melpa)
 
 (depends-on "ace-jump-mode")
