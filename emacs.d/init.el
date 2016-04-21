@@ -96,9 +96,6 @@
 ;; show matching parens
 (show-paren-mode 1)
 
-;; line numbers
-;; (global-linum-mode 1)
-
 ;; ido
 (require 'flx-ido)
 (ido-mode 1)
