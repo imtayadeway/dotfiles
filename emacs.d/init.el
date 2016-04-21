@@ -19,7 +19,6 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; windows
-(windmove-default-keybindings)
 (winner-mode 1)
 
 ;; put autosaves in temp dir
