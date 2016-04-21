@@ -110,6 +110,8 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)
+   (python . t)
+   (sh . t)
    (ruby . t)))
 
 (defun org-insert-src-block (src-code-type)
