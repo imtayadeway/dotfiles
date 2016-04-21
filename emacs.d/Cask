@@ -66,6 +66,7 @@
 (depends-on "sass-mode")
 (depends-on "scss-mode")
 (depends-on "shut-up")
+(depends-on "smex")
 (depends-on "toggle-quotes")
 (depends-on "web-mode")
 (depends-on "with-editor")
