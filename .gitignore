@@ -9,4 +9,5 @@ emacs.d/projectile-bookmarks.eld
 emacs.d/projectile.cache
 emacs.d/rake.cache
 emacs.d/session.*
+emacs.d/tramp
 emacs.d/url
