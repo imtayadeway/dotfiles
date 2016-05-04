@@ -13,7 +13,7 @@ PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
 
 source "/usr/local/share/chruby/chruby.sh"
 source "/usr/local/share/chruby/auto.sh"
-chruby 2.2.4
+chruby 2.2.5
 
 ### local config settings, if any
 if [ -e $HOME/.bashrc.local ]; then
