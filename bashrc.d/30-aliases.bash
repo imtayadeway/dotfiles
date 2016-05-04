@@ -72,10 +72,10 @@ alias js="bundle exec jekyll serve --drafts"
 alias jsonpp="python -m json.tool"
 alias killemacs="emacsclient -e '(kill-emacs)'"
 alias killruby='killall -9 ruby'
-alias la="ls -la"
+alias la="ls -la --group-directories-first"
 alias less="less -R" # display colors correctly
-alias lh="ls -lah"
-alias ll="ls -l"
+alias lh="ls -lahv --group-directories-first"
+alias ll="ls -l --group-directories-first"
 alias ln="ln -v"
 
 if [[ $(uname) == Darwin ]]; then
