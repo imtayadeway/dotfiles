@@ -151,7 +151,7 @@ else
     alias agi="sudo apt-get install"
     alias agr="sudo apt-get remove"
     alias acs="apt-cache search"
-    alias agu="sudo apt-get update"
+    alias agu="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove"
 fi
 
 ### Meta
