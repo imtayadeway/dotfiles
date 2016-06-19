@@ -2,5 +2,5 @@
 # group: general
 # --
 puts "#" * 90
-puts caller
+puts $0
 puts "#" * 90
