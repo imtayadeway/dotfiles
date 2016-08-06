@@ -26,6 +26,7 @@
 (defun open-index-file ()
   "Open the master org TODO list."
   (interactive)
+  (persp-switch "Documents")
   (find-file (org-file-path "index.org"))
   (end-of-buffer))
 
