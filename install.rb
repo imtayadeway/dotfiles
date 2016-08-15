@@ -19,6 +19,7 @@ def dotfiles
     "offlineimaprc",
     "offlineimap.py",
     "railsrc",
+    "rubocop.yml",
     "rspec",
     "tmux.conf",
     "vimrc",
