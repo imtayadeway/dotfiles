@@ -42,6 +42,7 @@
 (depends-on "magit")
 (depends-on "magit-popup")
 (depends-on "markdown-mode")
+(depends-on "minitest")
 (depends-on "multi-term")
 (depends-on "package-build")
 (depends-on "pallet")
