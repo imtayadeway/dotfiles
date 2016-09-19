@@ -54,6 +54,8 @@
   gpgsign = true
 [core]
   excludesfile = ~/.gitignore
+[diff]
+  compactionHeuristic = true
 [push]
   default = current
 [merge]
