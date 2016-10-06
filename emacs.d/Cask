@@ -57,6 +57,7 @@
 (depends-on "rainbow-mode")
 (depends-on "rake")
 (depends-on "relative-line-numbers")
+(depends-on "restclient")
 (depends-on "rhtml-mode")
 (depends-on "rspec-mode")
 (depends-on "rubocop")
