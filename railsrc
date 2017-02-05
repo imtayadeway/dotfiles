@@ -1,7 +1,12 @@
 --database=postgresql
 --edge
+--skip-action-cable
+--skip-action-mailer
 --skip-bundle
+--skip-javascript
 --skip-keeps
+--skip-listen
 --skip-spring
+--skip-sprockets
 --skip-test
 --skip-turbolinks
