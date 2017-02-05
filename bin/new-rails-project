@@ -1,0 +1,39 @@
+#!/bin/bash
+
+set -e
+
+name=$1
+args=${@:2}
+
+main() {
+  create_project_directory
+  move_into_project_directory
+  create_initial_gemfile
+  bundle_install
+  create_new_rails_project
+  bundle_install
+}
+
+create_project_directory() {
+  mkdir $name 
+}
+
+move_into_project_directory() {
+  cd $name
+}
+
+create_initial_gemfile() {
+  echo "source \"https://rubygems.org\"" > Gemfile
+  echo "" >> Gemfile
+  echo "gem \"rails\"" >> Gemfile
+}
+
+bundle_install() {
+  bundle install
+}
+
+create_new_rails_project() {
+  yes | bundle exec rails new . $args
+}
+
+main
