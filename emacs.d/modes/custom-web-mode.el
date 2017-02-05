@@ -4,6 +4,7 @@
 (add-to-list 'auto-mode-alist '("\\.erb$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html$\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.rhtml$\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
 
 (add-hook 'web-mode-hook 'rainbow-mode)
 (add-hook 'web-mode-hook 'rspec-mode)
