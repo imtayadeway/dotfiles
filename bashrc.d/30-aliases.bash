@@ -95,7 +95,7 @@ alias mkdir="mkdir -p"
 if [[ $(uname) == Darwin ]]; then
     alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\   -f2"
 else
-    alias myip="cat <(ifconfig wlan0) <(ifconfig eth0) | grep 'inet ' | cut --delimiter=' ' -f12 | sed s/addr://"
+    alias myip="cat <(ifconfig wlan0) <(ifconfig eth0) | grep 'inet ' | cut --delimiter=' ' -f10 | sed s/addr://"
 fi
 
 alias n="e ~/Documents/notes"
