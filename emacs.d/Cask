@@ -14,6 +14,7 @@
 (depends-on "color-theme")
 (depends-on "dash")
 (depends-on "diminish")
+(depends-on "ember-mode")
 (depends-on "epl")
 (depends-on "exec-path-from-shell")
 (depends-on "expand-region")
