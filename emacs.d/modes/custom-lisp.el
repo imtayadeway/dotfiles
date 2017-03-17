@@ -5,6 +5,7 @@
 
 (dolist (hook lispy-mode-hooks)
   (add-hook hook (lambda ()
+                   (paredit-mode)
                    (aggressive-indent-mode)
                    (eldoc-mode)
                    (rainbow-delimiters-mode))))
