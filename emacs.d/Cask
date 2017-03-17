@@ -30,6 +30,7 @@
 (depends-on "gitignore-mode")
 (depends-on "haml-mode")
 (depends-on "ido-vertical-mode")
+(depends-on "inf-clojure")
 (depends-on "inf-mongo")
 (depends-on "inf-ruby")
 (depends-on "inflections")
