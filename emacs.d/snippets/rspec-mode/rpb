@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: response.parsed_body
+# --
+response.parsed_body
