@@ -7,6 +7,7 @@ def dotfiles
   [
     "ackrc",
     "agignore",
+    "authinfo.gpg",
     "bashrc",
     "bashrc.d",
     "bin",

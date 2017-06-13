@@ -1,24 +1,43 @@
 [general]
-accounts = Gmail
-maxsyncaccounts = 1
+ui = ttyui
+accounts = personal, redhat
 pythonfile = ~/.offlineimap.py
 
-[Account Gmail]
-localrepository = Local
-remoterepository = Remote
+[Account personal]
+localrepository = fastmail-local
+remoterepository = fastmail-remote
+status_backend = sqlite
 
-[Repository Local]
+[Account redhat]
+localrepository = redhat-local
+remoterepository = redhat-remote
+status_backend = sqlite
+
+[Repository fastmail-local]
 type = Maildir
-localfolders = ~/Maildir
+localfolders = ~/mail/personal
 
-[Repository Remote]
-type = Gmail
-remoteuser = imtay.wade@gmail.com
-remotepasseval = get_password_emacs("imap.gmail.com", "imtay.wade@gmail.com", "993")
+[Repository fastmail-remote]
+type = IMAP
+remotehost = mail.messagingengine.com
+remoteuser = timwade@fastmail.com
+remotepasseval = get_authinfo_password("mail.messagingengine.com", "timwade@fastmail.com", "993")
+ssl = yes
+holdconnectionopen = yes
 realdelete = no
+maxconnections = 3
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
-folderfilter = lambda foldername: foldername not in ['[Gmail]/Spam', '[Gmail]/All Mail', '[Gmail]/Starred', '[Gmail]/Important']
+[Repository redhat-local]
+type = Maildir
+localfolders = ~/mail/redhat
 
-holdconnectionopen = true
-keepalive = 60
+[Repository redhat-remote]
+type = Gmail
+remoteuser = twade@redhat.com
+remotepasseval = get_authinfo_password("imap.gmail.com", "twade@redhat.com", "993")
+ssl = yes
+holdconnectionopen = yes
+realdelete = no
+maxconnections = 3
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
