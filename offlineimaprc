@@ -27,6 +27,7 @@ holdconnectionopen = yes
 realdelete = no
 maxconnections = 3
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda folder: folder not in ["INBOX.Drafts"]
 
 [Repository redhat-local]
 type = Maildir
@@ -41,3 +42,4 @@ holdconnectionopen = yes
 realdelete = no
 maxconnections = 3
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda folder: folder not in ["Drafts"]
