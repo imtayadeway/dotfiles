@@ -18,6 +18,10 @@
 ;; yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; fonts
+(when (member "Symbola" (font-family-list))
+  (set-fontset-font t 'unicode "Symbola" nil 'prepend))
+
 ;; windows
 (winner-mode 1)
 
