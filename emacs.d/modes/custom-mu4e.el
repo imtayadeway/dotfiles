@@ -56,3 +56,14 @@
                    ( smtpmail-stream-type          . starttls)))))
 
 (setq mu4e-context-policy 'pick-first)
+
+;; Refile will set mail to All Mail (basically archiving them). I want this to
+;; auto-mark them as read, so I redefine refile to remove the u flag.
+(setq mu4e-marks (assq-delete-all 'refile mu4e-marks))
+(push '(refile :char ("r" . "▶")
+               :prompt "refile"
+               :dyn-target (lambda (target msg) (mu4e-get-refile-folder msg))
+               :action
+               (lambda (docid msg target)
+                 (mu4e~proc-move docid (mu4e~mark-check-target target) "-u-N")))
+      mu4e-marks)
