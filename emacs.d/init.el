@@ -22,6 +22,9 @@
 (when (member "Symbola" (font-family-list))
   (set-fontset-font t 'unicode "Symbola" nil 'prepend))
 
+;; keys
+(setq x-alt-keysym 'meta)
+
 ;; windows
 (winner-mode 1)
 
