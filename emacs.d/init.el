@@ -121,3 +121,14 @@
 
 ;; inf-ruby
 (add-hook 'after-init-hook 'inf-ruby-switch-setup) ;; for using pry in rspec mode
+
+;; set up windows in main perspective
+(progn
+  (interactive)
+  (mu4e)
+  (split-window-horizontally)
+  (other-window 1)
+  (split-window)
+  (other-window 1)
+  (multi-term)
+  (other-window -2))
