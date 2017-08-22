@@ -42,7 +42,7 @@
                           (string-prefix-p "/redhat" (mu4e-message-field msg :maildir))))
           :vars '( ( user-mail-address             . "twade@redhat.com" )
                    ( user-full-name                . "Tim Wade" )
-                   ( mu4e-compose-signature        . nil)
+                   ( mu4e-compose-signature        . "\nTim Wade\n\nSoftware Developer\n\nhttps://redhat.com")
                    ( mu4e-sent-folder              . "/redhat/[Gmail].Sent Mail" )
                    ( mu4e-drafts-folder            . "/redhat/Drafts" )
                    ( mu4e-trash-folder             . "/redhat/Trash" )
