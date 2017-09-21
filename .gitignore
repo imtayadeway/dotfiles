@@ -11,4 +11,5 @@ emacs.d/rake.cache
 emacs.d/session.*
 emacs.d/smex-items
 emacs.d/tramp
+emacs.d/tutorial
 emacs.d/url
