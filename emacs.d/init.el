@@ -53,6 +53,7 @@
 
 (require 'multi-term)
 (require 'mu4e)
+(require 'evil)
 
 ;; allow 20MB of memory (instead of 0.76MB) before calling GC
 (setq gc-cons-threshold 20000000)
