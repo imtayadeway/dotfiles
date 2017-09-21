@@ -17,6 +17,7 @@ def dotfiles
     "gitconfig",
     "gitignore",
     "gitmessage",
+    "lein/project.clj",
     "offlineimaprc",
     "offlineimap.py",
     "railsrc",
