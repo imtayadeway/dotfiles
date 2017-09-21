@@ -16,3 +16,4 @@ pathmunge $HOME/bin after
 pathmunge $HOME/.rvm/bin after
 pathmunge $HOME/.cask/bin after
 pathmunge $HOME/.bin after
+pathmunge $HOME/.cargo/bin after
