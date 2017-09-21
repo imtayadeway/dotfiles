@@ -40,6 +40,7 @@
 (depends-on "json-reformat")
 (depends-on "json-snatcher")
 (depends-on "jump")
+(depends-on "kibit-helper")
 (depends-on "less-css-mode")
 (depends-on "let-alist")
 (depends-on "lorem-ipsum")
