@@ -1,5 +1,5 @@
 (setq lispy-mode-hooks
-      '(clojure-mode-hook
+      '(cider-mode-hook
         emacs-lisp-mode-hook
         lisp-mode-hook))
 
