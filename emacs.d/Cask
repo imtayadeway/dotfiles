@@ -45,6 +45,7 @@
 (depends-on "let-alist")
 (depends-on "lorem-ipsum")
 (depends-on "magit")
+(depends-on "magit-gh-pulls")
 (depends-on "magit-popup")
 (depends-on "markdown-mode")
 (depends-on "minitest")
