@@ -10,6 +10,7 @@ pathmunge () {
 
 pathmunge /usr/local/sbin
 pathmunge /usr/local/bin
+pathmunge /usr/local/go/bin
 pathmunge /usr/local/heroku/bin
 pathmunge /sbin after
 pathmunge $HOME/bin after
