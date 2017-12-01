@@ -62,3 +62,7 @@
   ff = only
 [branch]
   autosetuprebase = always
+[github]
+  user = imtayadeway
+[include]
+  path = ~/.gitconfig.local
