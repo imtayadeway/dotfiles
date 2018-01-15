@@ -54,24 +54,24 @@
          (file (construct-filename notes-directory "journal.org"))
          "* %<%A %Y-%m-%d>\n  - %?")
 
-        ("q" "Media queues")
+        ("m" "Media queues")
 
-        ("qf" "Films"
+        ("mf" "Films"
          entry
          (file (construct-filename notes-directory "media-films.org"))
          "* %?\n")
 
-        ("qm" "Music"
+        ("mm" "Music"
          entry
          (file (construct-filename notes-directory "media-music.org"))
          "* %?\n")
 
-        ("qr" "Reading"
+        ("mr" "Reading"
          entry
          (file (construct-filename notes-directory "media-reading.org"))
          "* %?\n")
 
-        ("qt" "Television"
+        ("mt" "Television"
          entry
          (file (construct-filename notes-directory "media-tv.org"))
          "* %?\n")
