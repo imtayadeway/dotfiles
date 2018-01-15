@@ -6,12 +6,10 @@ pythonfile = ~/.offlineimap.py
 [Account personal]
 localrepository = fastmail-local
 remoterepository = fastmail-remote
-status_backend = sqlite
 
 [Account redhat]
 localrepository = redhat-local
 remoterepository = redhat-remote
-status_backend = sqlite
 
 [Repository fastmail-local]
 type = Maildir
