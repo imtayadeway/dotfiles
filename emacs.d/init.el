@@ -123,6 +123,11 @@
 ;; inf-ruby
 (add-hook 'after-init-hook 'inf-ruby-switch-setup) ;; for using pry in rspec mode
 
+;; compilation mode
+(setq compilation-scroll-output t)
+;; prevent comilation buffers paging with less
+(setenv "PAGER" "cat")
+
 ;; set up windows in main perspective
 (progn
   (interactive)
