@@ -37,6 +37,7 @@
 (depends-on "inf-mongo")
 (depends-on "inf-ruby")
 (depends-on "inflections")
+(depends-on "irfc")
 (depends-on "json-mode")
 (depends-on "json-reformat")
 (depends-on "json-snatcher")
