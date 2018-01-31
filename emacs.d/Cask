@@ -79,6 +79,7 @@
 (depends-on "shut-up")
 (depends-on "smex")
 (depends-on "toggle-quotes")
+(depends-on "typescript-mode")
 (depends-on "web-mode")
 (depends-on "with-editor")
 (depends-on "wrap-region")
