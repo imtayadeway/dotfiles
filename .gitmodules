@@ -1,3 +1,0 @@
-[submodule "emacs.d/themes/choco"]
-	path = emacs.d/themes/choco
-	url = git@github.com:imtayadeway/emacs-color-theme-choco
