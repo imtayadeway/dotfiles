@@ -71,14 +71,8 @@
 (delete-selection-mode t)
 
 ;; color-theme and choco
-(add-to-list 'load-path "~/.emacs.d/themes/choco")
-(when (display-graphic-p)
-    (require 'color-theme)
-  (require 'color-theme-choco)
-  (eval-after-load "color-theme"
-    '(progn
-       (color-theme-initialize)
-       (color-theme-choco))))
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'choco t)
 
 ;; whitespace
 (require 'whitespace)
