@@ -1,11 +1,15 @@
+(package-initialize)
+
 ;; Turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
-;; full screen
 (custom-set-variables
- '(initial-frame-alist (quote ((fullscreen . maximized)))))
+ '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(package-selected-packages
+   (quote
+    (typescript-mode irfc graphql-mode yasnippet yaml-mode writegood-mode wrap-region web-mode toggle-quotes smex scss-mode sass-mode rust-mode ruby-hash-syntax ruby-end ruby-compilation rubocop rspec-mode rhtml-mode restclient rainbow-mode rainbow-delimiters projectile-rails persp-projectile paredit pallet multi-term minitest markdown-mode magit-gh-pulls lorem-ipsum less-css-mode kibit-helper jump json-mode inf-mongo inf-clojure ido-vertical-mode gitignore-mode gitconfig-mode git-timemachine flycheck flx-ido feature-mode expand-region exec-path-from-shell evil ember-mode diminish color-theme coffee-mode cider chruby bundler alchemist aggressive-indent ag ace-window))))
 ;; hack for toggling fullscreen after init
 (run-with-idle-timer 0.1 nil 'toggle-frame-fullscreen)
 
