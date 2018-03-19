@@ -53,7 +53,7 @@
 ;; exec path
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
-(setq exec-path (append exec-path '("/usr/local/bin")))
+(setq exec-path (append exec-path '("/usr/local/bin" "/usr/local/go/bin")))
 
 (require 'multi-term)
 (require 'mu4e)
