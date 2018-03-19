@@ -65,6 +65,9 @@
 ;; increase undo limit
 (setq undo-limit 3600)
 
+;; tab-width
+(setq default-tab-width 4)
+
 ;; treat camelcase as separate words
 (add-hook 'prog-mode-hook 'subword-mode)
 
