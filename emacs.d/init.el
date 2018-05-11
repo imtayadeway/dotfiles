@@ -6,10 +6,50 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("2787225023b43c102d0bfceba48e2d12a5b8d0fd338e447b43f9a9f3ea42002d" "8d6d1b473fc4da35619d20263d96e9e4cc0acefcac5c216fc5bcb634b542fb22" default)))
  '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(org-agenda-files
+   (quote
+    ("~/Dropbox/org/articles.org" "~/Dropbox/org/birthdays.org" "~/Dropbox/org/blog-ideas.org" "~/Dropbox/org/groceries.org" "~/Dropbox/org/index.org" "~/Dropbox/org/reminders.org")))
  '(package-selected-packages
    (quote
-    (typescript-mode irfc graphql-mode yasnippet yaml-mode writegood-mode wrap-region web-mode toggle-quotes smex scss-mode sass-mode rust-mode ruby-hash-syntax ruby-end ruby-compilation rubocop rspec-mode rhtml-mode restclient rainbow-mode rainbow-delimiters projectile-rails persp-projectile paredit pallet multi-term minitest markdown-mode magit-gh-pulls lorem-ipsum less-css-mode kibit-helper jump json-mode inf-mongo inf-clojure ido-vertical-mode gitignore-mode gitconfig-mode git-timemachine flycheck flx-ido feature-mode expand-region exec-path-from-shell evil ember-mode diminish color-theme coffee-mode cider chruby bundler alchemist aggressive-indent ag ace-window))))
+    (go-mode typescript-mode irfc graphql-mode yasnippet yaml-mode writegood-mode wrap-region web-mode toggle-quotes smex scss-mode sass-mode rust-mode ruby-hash-syntax ruby-end ruby-compilation rubocop rspec-mode rhtml-mode restclient rainbow-mode rainbow-delimiters projectile-rails persp-projectile paredit pallet multi-term minitest markdown-mode magit-gh-pulls lorem-ipsum less-css-mode kibit-helper jump json-mode inf-mongo inf-clojure ido-vertical-mode gitignore-mode gitconfig-mode git-timemachine flycheck flx-ido feature-mode expand-region exec-path-from-shell evil ember-mode diminish color-theme coffee-mode cider chruby bundler alchemist aggressive-indent ag ace-window)))
+ '(safe-local-variable-values
+   (quote
+    ((eval when
+           (and
+            (buffer-file-name)
+            (file-regular-p
+             (buffer-file-name))
+            (string-match-p "^[^.]"
+                            (buffer-file-name)))
+           (unless
+               (featurep
+                (quote package-build))
+             (let
+                 ((load-path
+                   (cons "../package-build" load-path)))
+               (require
+                (quote package-build))))
+           (package-build-minor-mode)
+           (set
+            (make-local-variable
+             (quote package-build-working-dir))
+            (expand-file-name "../working/"))
+           (set
+            (make-local-variable
+             (quote package-build-archive-dir))
+            (expand-file-name "../packages/"))
+           (set
+            (make-local-variable
+             (quote package-build-recipes-dir))
+            default-directory))))))
 ;; hack for toggling fullscreen after init
 (run-with-idle-timer 0.1 nil 'toggle-frame-fullscreen)
 
@@ -133,15 +173,20 @@
 (progn
   (interactive)
   (mu4e)
-  (org-agenda nil "a")
   (multi-term)
   (delete-other-windows)
   (switch-to-buffer "*mu4e-main*")
   (split-window-horizontally)
   (other-window 1)
-  (switch-to-buffer "*Org Agenda*")
+  (switch-to-buffer "*scratch*")
   (split-window)
   (other-window 1)
   (switch-to-buffer "*terminal<1>*")
   (other-window 1)
   (mu4e))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
