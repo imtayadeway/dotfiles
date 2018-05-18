@@ -1,4 +1,4 @@
-(setq mu4e-mu-binary "/usr/bin/mu")
+(setq mu4e-mu-binary "/usr/local/bin/mu")
 (setq mu4e-maildir "~/mail")
 (setq mu4e-attachment-dir "~/Desktop")
 (setq mu4e-view-show-images t)
