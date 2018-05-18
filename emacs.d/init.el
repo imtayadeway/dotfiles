@@ -138,17 +138,14 @@
   (interactive)
   (mu4e)
   (org-agenda nil "a")
-  (multi-term)
   (delete-other-windows)
   (switch-to-buffer "*mu4e-main*")
   (split-window-horizontally)
   (other-window 1)
   (switch-to-buffer "*Org Agenda*")
-  (split-window)
-  (other-window 1)
-  (switch-to-buffer "*terminal<1>*")
   (other-window 1)
   (mu4e))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
