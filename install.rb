@@ -11,6 +11,7 @@ def dotfiles
     "bashrc",
     "bashrc.d",
     "bin",
+    "bundle/config",
     "config/redshift.conf",
     "emacs.d",
     "gemrc",
