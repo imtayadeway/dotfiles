@@ -1,15 +1,11 @@
 [general]
 ui = ttyui
-accounts = personal, redhat
+accounts = personal
 pythonfile = ~/.offlineimap.py
 
 [Account personal]
 localrepository = fastmail-local
 remoterepository = fastmail-remote
-
-[Account redhat]
-localrepository = redhat-local
-remoterepository = redhat-remote
 
 [Repository fastmail-local]
 type = Maildir
@@ -27,17 +23,3 @@ maxconnections = 3
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 folderfilter = lambda folder: folder not in ["INBOX.Drafts"]
 
-[Repository redhat-local]
-type = Maildir
-localfolders = ~/mail/redhat
-
-[Repository redhat-remote]
-type = Gmail
-remoteuser = twade@redhat.com
-remotepasseval = get_authinfo_password("imap.gmail.com", "twade@redhat.com", "993")
-ssl = yes
-holdconnectionopen = yes
-realdelete = no
-maxconnections = 3
-sslcacertfile = /etc/ssl/certs/ca-certificates.crt
-folderfilter = lambda folder: folder not in ["Drafts"]
