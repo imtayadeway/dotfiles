@@ -34,6 +34,8 @@ def try_linking(file)
     puts "skipping #{ target(file) }: #{ skip_reason(target(file)) }"
   else
     puts "linking #{ target(file) }"
+    require "fileutils"
+    FileUtils.mkdir_p(File.dirname(target(file)))
     File.symlink(source(file), target(file))
   end
 end
