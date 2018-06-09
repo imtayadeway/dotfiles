@@ -82,23 +82,11 @@ alias less="less -R" # display colors correctly
 alias lh="ls -lahv --group-directories-first"
 alias ll="ls -l --group-directories-first"
 alias ln="ln -v"
-
-if [[ $(uname) == Darwin ]]; then
-    alias ls="ls -G -h"
-else
-    alias ls="ls --color -h"
-fi
-
+alias ls="ls --color -h"
 alias loc="wc -l * | sort -n"
 alias migrate="bundle exec rake db:migrate db:rollback && bundle exec rake db:migrate db:test:prepare"
 alias mkdir="mkdir -p"
-
-if [[ $(uname) == Darwin ]]; then
-    alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\   -f2"
-else
-    alias myip="cat <(ifconfig wlan0) <(ifconfig eth0) | grep 'inet ' | cut --delimiter=' ' -f10 | sed s/addr://"
-fi
-
+alias myip="cat <(ifconfig wlan0) <(ifconfig eth0) | grep 'inet ' | cut --delimiter=' ' -f10 | sed s/addr://"
 alias n="e ~/Documents/notes"
 alias now="date '+%Y-%m-%d %H:%M'"
 alias op="gnome-open"
@@ -111,13 +99,7 @@ alias r="bundle exec rails"
 alias rc="bundle exec rails console"
 alias reguard="bin/spring stop && guard"
 alias respring="bin/spring stop"
-
-if [[ $(uname) == Darwin ]]; then
-    alias retag="rm -f TAGS; ctags -a -e -f TAGS --tag-relative -R --exclude=.git --exclude=log --exclude=tmp *"
-else
-    alias retag="rm -f TAGS; ctags-exuberant -a -e -f TAGS --tag-relative -R app lib vendor"
-fi
-
+alias retag="rm -f TAGS; ctags-exuberant -a -e -f TAGS --tag-relative -R app lib vendor"
 alias rg="bundle exec rails generate"
 alias rk="bundle exec rake"
 alias rkr="bundle exec rake routes"
@@ -144,17 +126,10 @@ alias xcopy="xclip -selection clipboard"
 alias xpaste="xclip -o"
 
 ### Package management
-if [[ $(uname) == Darwin ]]; then
-    alias agi="brew install"
-    alias agr="brew rm"
-    alias acs="brew search"
-    alias agu="brew update"
-else
-    alias agi="sudo apt-get install"
-    alias agr="sudo apt-get remove"
-    alias acs="apt-cache search"
-    alias agu="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove"
-fi
+alias agi="sudo apt-get install"
+alias agr="sudo apt-get remove"
+alias acs="apt-cache search"
+alias agu="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove"
 
 ### Meta
 alias rce="$EDITOR ~/.bashrc"
