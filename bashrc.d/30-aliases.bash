@@ -6,7 +6,6 @@ alias ....="cd ../../../"
 alias acs="apt-cache search"
 alias aliases="e ~/.dotfiles/bashrc.d/30-aliases.bash"
 alias amend="git commit --amend"
-alias api="cd ~/src/manageiq-api"
 alias b="bundle"
 alias bake="bundle exec rake"
 alias be="bundle exec"
@@ -61,7 +60,6 @@ alias gpl="git pull"
 alias gpu="git fetch upstream && git merge upstream/master"
 alias gps="git push"
 alias gpsf="git push --force"
-alias gql="cd ~/src/manageiq-graphql"
 alias grao="git remote add origin"
 alias grep="grep --color=always"
 alias greph="history | grep"
@@ -93,7 +91,6 @@ fi
 
 alias loc="wc -l * | sort -n"
 alias migrate="bundle exec rake db:migrate db:rollback && bundle exec rake db:migrate db:test:prepare"
-alias miq="cd ~/src/manageiq"
 alias mkdir="mkdir -p"
 
 if [[ $(uname) == Darwin ]]; then
