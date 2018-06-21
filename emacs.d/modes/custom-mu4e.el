@@ -15,6 +15,8 @@
       smtpmail-auth-credentials (expand-file-name "~/.authinfo.gpg")
       smtpmail-debug-info t)
 
+(setq auth-sources '("~/.authinfo.gpg"))
+
 (setq mu4e-contexts
       `(,(make-mu4e-context
           :name "Personal"
