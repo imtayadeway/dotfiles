@@ -34,28 +34,7 @@
                    ( mu4e-refile-folder     . "/personal/INBOX.Archive")
                    ( smtpmail-smtp-server   . "smtp.fastmail.com")
                    ( smtpmail-smtp-service  . 465)
-                   ( smtpmail-stream-type   . ssl)))
-        ,(make-mu4e-context
-          :name "Work"
-          :enter-func (lambda () (mu4e-message "Entering Work context"))
-          :leave-func (lambda () (mu4e-message "Leaving Work context"))
-          :match-func (lambda (msg)
-                        (when msg
-                          (string-prefix-p "/redhat" (mu4e-message-field msg :maildir))))
-          :vars '( ( user-mail-address             . "twade@redhat.com" )
-                   ( user-full-name                . "Tim Wade" )
-                   ( mu4e-compose-signature        . "\nTim Wade\n\nSoftware Developer\n\nhttps://redhat.com")
-                   ( mu4e-sent-folder              . "/redhat/[Gmail].Sent Mail" )
-                   ( mu4e-drafts-folder            . "/redhat/Drafts" )
-                   ( mu4e-trash-folder             . "/redhat/Trash" )
-                   ( mu4e-refile-folder            . "/redhat/Archives")
-                   ( starttls-use-gnutls           . t)
-                   ( smtpmail-starttls-credentials . '(("smtp.gmail.com" 587 nil nil)))
-                   ( smtpmail-auth-credentials     . (expand-file-name "~/.authinfo.gpg"))
-                   ( smtpmail-default-smtp-server  . "smtp.gmail.com")
-                   ( smtpmail-smtp-server          . "smtp.gmail.com")
-                   ( smtpmail-smtp-service         . 587)
-                   ( smtpmail-stream-type          . starttls)))))
+                   ( smtpmail-stream-type   . ssl)))))
 
 (setq mu4e-context-policy 'pick-first)
 
