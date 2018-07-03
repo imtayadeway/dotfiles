@@ -136,6 +136,7 @@
 (progn
   (interactive)
   (mu4e)
+  (sleep-for 0.1)
   (org-agenda nil "a")
   (delete-other-windows)
   (switch-to-buffer "*mu4e-main*")
