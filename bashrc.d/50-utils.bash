@@ -24,3 +24,13 @@ function oports() {
         xargs printf '%-10s %-10s %-10s\n' |
         uniq
 }
+
+function set-scaling-factor() {
+    if [ "$#" -ne 1 ]
+    then
+        echo "Usage: set-scaling-factor <n>"
+    else
+        gsettings set org.gnome.desktop.interface scaling-factor "$1"
+        gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "[{'Gdk/WindowScalingFactor', <$1>}]"
+    fi
+}
