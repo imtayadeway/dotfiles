@@ -47,6 +47,10 @@
   :init
   (setq aw-keys '(?a ?r ?s ?t ?d ?h ?n ?e ?i ?o)))
 
+(use-package ag
+  :init
+  (setq ag-highlight-search t))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
