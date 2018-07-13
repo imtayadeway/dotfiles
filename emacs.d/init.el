@@ -51,6 +51,13 @@
   :init
   (setq ag-highlight-search t))
 
+(use-package avy
+  :init
+  (setq avy-keys '(?a ?r ?s ?t ?d ?h ?n ?e ?i ?o))
+  (setq avy-style 'at-full)
+  (setq avy-background t)
+  (setq avy-all-windows nil))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
