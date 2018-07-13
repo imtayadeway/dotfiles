@@ -42,6 +42,11 @@
 (require 'pallet)
 (pallet-mode t)
 
+;; use-package
+(use-package ace-window
+  :init
+  (setq aw-keys '(?a ?r ?s ?t ?d ?h ?n ?e ?i ?o)))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
