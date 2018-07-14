@@ -51,6 +51,10 @@
   :init
   (setq ag-highlight-search t))
 
+(use-package aggressive-indent)
+(use-package alchemist)
+(use-package async)
+
 (use-package avy
   :init
   (setq avy-keys '(?a ?r ?s ?t ?d ?h ?n ?e ?i ?o))
@@ -58,11 +62,16 @@
   (setq avy-background t)
   (setq avy-all-windows nil))
 
+(use-package bundler)
+(use-package chruby)
+
 (use-package cider
   :requires clojure
   :hook clojure-mode-hook
   :init
   (setq nrepl-hide-special-buffers t))
+
+(use-package clojure-mode)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
