@@ -58,6 +58,12 @@
   (setq avy-background t)
   (setq avy-all-windows nil))
 
+(use-package cider
+  :requires clojure
+  :hook clojure-mode-hook
+  :init
+  (setq nrepl-hide-special-buffers t))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
