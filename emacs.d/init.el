@@ -122,6 +122,12 @@
 
 (use-package graphql-mode)
 
+(use-package haml-mode
+  :hook rainbow-mode
+  :init
+  (add-hook 'haml-mode-hook (lambda () (setq indent-tabs-mode nil)))
+  (add-to-list 'auto-mode-alist '("\\.hamlc$" . haml-mode)))
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
