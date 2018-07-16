@@ -82,12 +82,12 @@
 (use-package clojure-mode)
 
 (use-package coffee-mode
-  :custom
-  (coffee-tab-width 2))
+  :init
+  (setq coffee-tab-width 2))
 
 (use-package css-mode
-  :custom
-  (css-indent-offset 2))
+  :init
+  (setq css-indent-offset 2))
 
 (use-package diminish)
 
