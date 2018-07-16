@@ -74,7 +74,6 @@
 
 (use-package cider
   :hook (clojure-mode
-         paredit-mode
          aggressive-indent-mode
          eldoc-mode
          rainbow-delimiters-mode)
@@ -102,6 +101,9 @@
   (setq-default dired-listing-switches "-lAhv --group-directories-first"))
 
 (use-package elixir-mode)
+
+(use-package paredit
+  :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
