@@ -188,6 +188,19 @@
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
+(use-package persp-projectile
+  :bind (:map projectile-mode-map
+              ("s-s" . projectile-persp-switch-project)))
+
+(use-package projectile
+  :config
+  (projectile-global-mode)
+  :hook projectile-rails-on
+  :init
+  (setq projectile-tags-command "ctags-exuberant -Re -f \"%s\" --languages=-javascript --exclude=.git --exclude=tmp --exclude=log"))
+
+(use-package projectile-rails)
+
 (use-package rainbow-delimiters
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . rainbow-delimiters-mode))
 
