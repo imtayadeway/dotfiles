@@ -59,7 +59,8 @@
   :init
   (setq ag-highlight-search t))
 
-(use-package aggressive-indent)
+(use-package aggressive-indent
+  :hook ((cider-mode emacs-lisp-mode lisp-mode) . aggressive-indent-mode))
 (use-package alchemist)
 
 (use-package avy
@@ -74,7 +75,6 @@
 
 (use-package cider
   :hook (clojure-mode
-         aggressive-indent-mode
          eldoc-mode
          rainbow-delimiters-mode)
   :init
