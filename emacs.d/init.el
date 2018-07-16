@@ -103,6 +103,12 @@
 
 (use-package elixir-mode)
 
+(use-package ember-mode)
+(use-package evil)
+(use-package exec-path-from-shell)
+(use-package expand-region)
+(use-package feature-mode)
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
