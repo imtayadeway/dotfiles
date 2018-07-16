@@ -144,6 +144,11 @@
 (use-package inf-ruby
   :after ruby-mode)
 
+(use-package js
+  :ensure nil
+  :init
+  (setq js-indent-level 2))
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
