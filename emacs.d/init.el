@@ -74,7 +74,11 @@
 
 (use-package cider
   :requires clojure
-  :hook clojure-mode-hook
+  :hook (clojure-mode
+         paredit-mode
+         aggressive-indent-mode
+         eldoc-mode
+         rainbow-delimiters-mode)
   :init
   (setq nrepl-hide-special-buffers t))
 
