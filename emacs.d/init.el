@@ -101,6 +101,8 @@
   (add-hook 'dired-mode-hook 'rspec-dired-mode)
   (setq-default dired-listing-switches "-lAhv --group-directories-first"))
 
+(use-package elixir-mode)
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
