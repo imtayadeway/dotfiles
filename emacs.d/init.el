@@ -153,6 +153,9 @@
 (use-package kibit-helper)
 (use-package less-css-mode)
 
+(use-package lisp-mode
+  :ensure nil)
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
