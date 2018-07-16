@@ -53,7 +53,6 @@
 
 (use-package aggressive-indent)
 (use-package alchemist)
-(use-package async)
 
 (use-package avy
   :init
