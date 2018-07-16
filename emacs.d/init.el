@@ -95,6 +95,12 @@
 
 (use-package diminish)
 
+(use-package dired
+  :ensure nil
+  :init
+  (add-hook 'dired-mode-hook 'rspec-dired-mode)
+  (setq-default dired-listing-switches "-lAhv --group-directories-first"))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
