@@ -126,6 +126,18 @@
   (add-hook 'haml-mode-hook (lambda () (setq indent-tabs-mode nil)))
   (add-to-list 'auto-mode-alist '("\\.hamlc$" . haml-mode)))
 
+(use-package ido
+  :config
+  (ido-everywhere 1)
+  (ido-mode 1)
+  :init
+  ;; disable ido faces to see flx highlights.
+  (setq ido-use-faces nil))
+
+(use-package ido-vertical-mode
+  :config
+  (ido-vertical-mode 1))
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
@@ -192,12 +204,6 @@
 
 ;; show matching parens
 (show-paren-mode 1)
-
-;; ido
-(ido-mode 1)
-(ido-vertical-mode 1)
-(ido-everywhere 1)
-(setq ido-use-faces nil) ;; disable ido faces to see flx highlights.
 
 (load "utils.el")
 (load "keybindings.el")
