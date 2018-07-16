@@ -172,6 +172,19 @@
   (setq minitest-use-zeus-when-possible nil)
   (setq minitest-keymap-prefix (kbd "C-c .")))
 
+(use-package multi-term
+  :bind (:map term-raw-map
+              ("M-o" . other-window)
+              ("C-y" . term-paste))
+  :init
+  (setq multi-term-program "/bin/bash")
+  (setq multi-term-program-switches "--login")
+  (setq yas-dont-activate t)
+  (add-hook 'term-exec-hook
+            (function
+             (lambda ()
+               (set-buffer-process-coding-system 'utf-8-unix 'utf-8-unix)))))
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
