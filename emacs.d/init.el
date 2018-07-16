@@ -93,6 +93,8 @@
   (css-indent-offset 2)
   :hook rainbow-mode)
 
+(use-package diminish)
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
