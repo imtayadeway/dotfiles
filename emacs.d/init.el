@@ -113,6 +113,10 @@
   (flx-ido-mode 1))
 
 (use-package flycheck)
+
+(use-package flyspell
+  :hook ((markdown-mode) . flyspell-mode))
+
 (use-package git-timemachine)
 
 (use-package go-mode
@@ -157,6 +161,11 @@
 
 (use-package lorem-ipsum)
 (use-package magit)
+
+(use-package markdown-mode
+  :init
+  (setq markdown-fontify-code-blocks-natively t)
+  (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode)))
 
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
