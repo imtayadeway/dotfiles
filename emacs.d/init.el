@@ -87,8 +87,7 @@
 
 (use-package css-mode
   :custom
-  (css-indent-offset 2)
-  :hook rainbow-mode)
+  (css-indent-offset 2))
 
 (use-package diminish)
 
@@ -123,7 +122,6 @@
 (use-package graphql-mode)
 
 (use-package haml-mode
-  :hook rainbow-mode
   :init
   (add-hook 'haml-mode-hook (lambda () (setq indent-tabs-mode nil)))
   (add-to-list 'auto-mode-alist '("\\.hamlc$" . haml-mode)))
@@ -133,6 +131,9 @@
 
 (use-package rainbow-delimiters
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . rainbow-delimiters-mode))
+
+(use-package rainbow-mode
+  :hook ((css-mode haml-mode) . rainbow-mode))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
