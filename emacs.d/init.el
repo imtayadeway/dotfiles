@@ -201,6 +201,11 @@
 
 (use-package projectile-rails)
 
+(use-package python
+  :hook yas-minor-mode
+  :init
+  (setq python-indent 2))
+
 (use-package rainbow-delimiters
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . rainbow-delimiters-mode))
 
