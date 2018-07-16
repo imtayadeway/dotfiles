@@ -113,6 +113,9 @@
   :config
   (flx-ido-mode 1))
 
+(use-package flycheck)
+(use-package git-timemachine)
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
