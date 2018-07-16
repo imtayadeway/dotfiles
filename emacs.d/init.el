@@ -138,6 +138,12 @@
   :config
   (ido-vertical-mode 1))
 
+(use-package inf-clojure)
+(use-package inf-mongo)
+
+(use-package inf-ruby
+  :after ruby-mode)
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
