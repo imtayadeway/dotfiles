@@ -84,6 +84,10 @@
 
 (use-package clojure-mode)
 
+(use-package coffee-mode
+  :custom
+  (coffee-tab-width 2))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
