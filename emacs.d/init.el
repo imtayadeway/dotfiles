@@ -155,6 +155,9 @@
 (use-package lisp-mode
   :ensure nil)
 
+(use-package lorem-ipsum)
+(use-package magit)
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
