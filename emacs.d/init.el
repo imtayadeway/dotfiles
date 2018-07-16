@@ -109,6 +109,10 @@
 (use-package expand-region)
 (use-package feature-mode)
 
+(use-package flx-ido
+  :config
+  (flx-ido-mode 1))
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
@@ -174,11 +178,9 @@
 (show-paren-mode 1)
 
 ;; ido
-(require 'flx-ido)
 (ido-mode 1)
 (ido-vertical-mode 1)
 (ido-everywhere 1)
-(flx-ido-mode 1)
 (setq ido-use-faces nil) ;; disable ido faces to see flx highlights.
 
 (load "utils.el")
