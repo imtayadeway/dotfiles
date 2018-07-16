@@ -167,6 +167,11 @@
   (setq markdown-fontify-code-blocks-natively t)
   (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode)))
 
+(use-package minitest
+  :init
+  (setq minitest-use-zeus-when-possible nil)
+  (setq minitest-keymap-prefix (kbd "C-c .")))
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
