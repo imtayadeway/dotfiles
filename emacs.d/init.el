@@ -116,6 +116,10 @@
 (use-package flycheck)
 (use-package git-timemachine)
 
+(use-package go-mode
+  :init
+  (add-hook 'before-save-hook 'gofmt-before-save))
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
