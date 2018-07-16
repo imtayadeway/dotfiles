@@ -43,6 +43,14 @@
 (pallet-mode t)
 
 ;; use-package
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+
+(setq use-package-verbose t)
+(setq use-package-always-ensure t)
+
+(require 'use-package)
+
 (use-package ace-window
   :init
   (setq aw-keys '(?a ?r ?s ?t ?d ?h ?n ?e ?i ?o)))
