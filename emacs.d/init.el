@@ -75,7 +75,6 @@
 
 (use-package cider
   :hook (clojure-mode
-         eldoc-mode
          rainbow-delimiters-mode)
   :init
   (setq nrepl-hide-special-buffers t)
@@ -99,6 +98,9 @@
   :init
   (add-hook 'dired-mode-hook 'rspec-dired-mode)
   (setq-default dired-listing-switches "-lAhv --group-directories-first"))
+
+(use-package eldoc
+  :hook ((cider-mode emacs-lisp-mode lisp-mode) . eldoc-mode))
 
 (use-package elixir-mode)
 
