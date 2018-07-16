@@ -120,6 +120,8 @@
   :init
   (add-hook 'before-save-hook 'gofmt-before-save))
 
+(use-package graphql-mode)
+
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
