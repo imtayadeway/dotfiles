@@ -88,6 +88,11 @@
   :custom
   (coffee-tab-width 2))
 
+(use-package css-mode
+  :custom
+  (css-indent-offset 2)
+  :hook rainbow-mode)
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
