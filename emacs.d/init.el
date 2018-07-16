@@ -74,8 +74,7 @@
 (use-package chruby)
 
 (use-package cider
-  :hook (clojure-mode
-         rainbow-delimiters-mode)
+  :hook clojure-mode
   :init
   (setq nrepl-hide-special-buffers t)
   :requires clojure)
@@ -106,6 +105,9 @@
 
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
+
+(use-package rainbow-delimiters
+  :hook ((cider-mode emacs-lisp-mode lisp-mode) . rainbow-delimiters-mode))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
