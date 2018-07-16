@@ -145,7 +145,6 @@
   :after ruby-mode)
 
 (use-package js
-  :ensure nil
   :init
   (setq js-indent-level 2))
 
