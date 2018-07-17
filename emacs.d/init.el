@@ -71,7 +71,10 @@
   (setq avy-all-windows nil))
 
 (use-package bundler)
-(use-package chruby)
+
+(use-package chruby
+  :config
+  (chruby "ruby-2.5.1"))
 
 (use-package cider
   :hook clojure-mode
@@ -219,6 +222,36 @@
 
 (use-package rake)
 (use-package restclient)
+
+(use-package rspec-mode
+  :init
+  (setq rspec-use-rake-when-possible nil)
+  (setq rspec-use-opts-file-when-available nil)
+  (setq rspec-use-zeus-when-possible nil)
+  (setq rspec-use-spring-when-possible nil)
+  (setq rspec-command-options "--format progress"))
+
+(use-package ruby-mode
+  :mode ("\\.rake$"
+         "\\.gemspec$"
+         "\\Capfile$"
+         "\\Gemfile$"
+         "\\Guardfile$"
+         "\\Rakefile$")
+  :bind (:map ruby-mode-map ("C-c C-c" . xmp))
+  :init
+  (add-hook 'ruby-mode-hook
+            (lambda ()
+              (setq ruby-insert-encoding-magic-comment nil)
+              (yas-minor-mode)
+              (ruby-end-mode)
+              (flycheck-mode)
+              (rubocop-mode)
+              (projectile-rails-on)
+              (global-set-key (kbd "C-c h") 'ruby-toggle-hash-syntax)
+              (local-set-key "\r" 'newline-and-indent)
+              (define-key ruby-mode-map (kbd "C-c C-c") 'xmp)))
+  :requires rcodetools)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
