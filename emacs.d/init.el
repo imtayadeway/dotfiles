@@ -26,8 +26,6 @@
 
 ;; windows
 (winner-mode 1)
-(setq split-height-threshold nil)
-(setq split-width-threshold 0)
 
 ;; put autosaves in temp dir
 (setq backup-directory-alist
