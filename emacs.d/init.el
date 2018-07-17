@@ -188,6 +188,10 @@
 (use-package paredit
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
+(use-package perspective
+  :config
+  (persp-mode))
+
 (use-package persp-projectile
   :bind (:map projectile-mode-map
               ("s-s" . projectile-persp-switch-project)))
@@ -195,6 +199,7 @@
 (use-package projectile
   :config
   (projectile-global-mode)
+  (require 'persp-projectile)
   :hook projectile-rails-on
   :init
   (setq projectile-tags-command "ctags-exuberant -Re -f \"%s\" --languages=-javascript --exclude=.git --exclude=tmp --exclude=log"))
