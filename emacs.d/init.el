@@ -217,6 +217,9 @@
 (use-package rainbow-mode
   :hook ((css-mode haml-mode) . rainbow-mode))
 
+(use-package rake)
+(use-package restclient)
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
