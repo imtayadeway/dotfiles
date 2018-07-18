@@ -266,6 +266,11 @@
   :init
   (setq scss-compile-at-save nil))
 
+(use-package smex)
+(use-package toggle-quotes)
+(use-package typescript-mode)
+(use-package undo-tree)
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
