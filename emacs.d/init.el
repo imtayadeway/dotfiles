@@ -279,6 +279,14 @@
   (setq web-mode-css-indent-offset 2)
   :mode ("\\.erb$" "\\.html$\\'" "\\.rhtml$\\'" "\\.hbs$"))
 
+(use-package wrap-region)
+(use-package writegood-mode)
+
+(use-package yaml-mode
+  :mode "\\.yml$")
+
+(use-package yasnippet)
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
