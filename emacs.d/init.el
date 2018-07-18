@@ -280,7 +280,9 @@
   :mode ("\\.erb$" "\\.html$\\'" "\\.rhtml$\\'" "\\.hbs$"))
 
 (use-package wrap-region)
-(use-package writegood-mode)
+
+(use-package writegood-mode
+  :hook ((markdown-mode) . writegood-mode))
 
 (use-package yaml-mode
   :mode "\\.yml$")
