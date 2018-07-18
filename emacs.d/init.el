@@ -232,6 +232,10 @@
   (setq rspec-use-spring-when-possible nil)
   (setq rspec-command-options "--format progress"))
 
+(use-package rubocop)
+(use-package ruby-end)
+(use-package ruby-hash-syntax)
+
 (use-package ruby-mode
   :mode ("\\.rake$"
          "\\.gemspec$"
