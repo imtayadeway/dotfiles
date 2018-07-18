@@ -36,11 +36,11 @@
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
 
-;; pallet
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
-(require 'pallet)
-(pallet-mode t)
+;; package.el
+(unless (assoc-default "melpa" package-archives)
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t))
+(unless (assoc-default "org" package-archives)
+  (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t))
 
 ;; use-package
 (unless (package-installed-p 'use-package)
