@@ -258,6 +258,9 @@
               (define-key ruby-mode-map (kbd "C-c C-c") 'xmp)))
   :requires rcodetools)
 
+(use-package rust-mode)
+(use-package sass-mode)
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
 
