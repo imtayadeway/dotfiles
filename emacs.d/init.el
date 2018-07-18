@@ -219,7 +219,7 @@
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . rainbow-delimiters-mode))
 
 (use-package rainbow-mode
-  :hook ((css-mode haml-mode) . rainbow-mode))
+  :hook ((css-mode haml-mode scss-mode) . rainbow-mode))
 
 (use-package rake)
 (use-package restclient)
@@ -260,6 +260,11 @@
 
 (use-package rust-mode)
 (use-package sass-mode)
+
+(use-package scss-mode
+  :mode "\\.scss\\'"
+  :init
+  (setq scss-compile-at-save nil))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
