@@ -219,7 +219,7 @@
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . rainbow-delimiters-mode))
 
 (use-package rainbow-mode
-  :hook ((css-mode haml-mode scss-mode) . rainbow-mode))
+  :hook ((css-mode haml-mode scss-mode web-mode) . rainbow-mode))
 
 (use-package rake)
 (use-package restclient)
@@ -270,6 +270,14 @@
 (use-package toggle-quotes)
 (use-package typescript-mode)
 (use-package undo-tree)
+
+(use-package web-mode
+  :hook rspec-mode
+  :init
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  :mode ("\\.erb$" "\\.html$\\'" "\\.rhtml$\\'" "\\.hbs$"))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
