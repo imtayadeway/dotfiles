@@ -169,7 +169,7 @@
 (use-package markdown-mode
   :init
   (setq markdown-fontify-code-blocks-natively t)
-  (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode)))
+  :mode "\\.md$")
 
 (use-package minitest
   :init
