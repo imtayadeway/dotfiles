@@ -403,7 +403,6 @@
 (use-package projectile-rails)
 
 (use-package python
-  :hook yas-minor-mode
   :init
   (setq python-indent 2))
 
@@ -440,7 +439,6 @@
   (add-hook 'ruby-mode-hook
             (lambda ()
               (setq ruby-insert-encoding-magic-comment nil)
-              (yas-minor-mode)
               (ruby-end-mode)
               (flycheck-mode)
               (rubocop-mode)
@@ -479,7 +477,8 @@
 (use-package yaml-mode
   :mode "\\.yml$")
 
-(use-package yasnippet)
+(use-package yasnippet
+  :hook ((python-mode ruby-mode rspec-mode) . yas-minor-mode))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/modes")
