@@ -482,7 +482,6 @@
   :hook ((python-mode ruby-mode rspec-mode) . yas-minor-mode))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/modes")
 
 ;; exec path
 (when (memq window-system '(mac ns))
