@@ -3,5 +3,6 @@
 .#*
 NOTES.org
 TAGS
+.bundle
 .projectile
 vendor/bundle
