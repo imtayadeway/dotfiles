@@ -508,10 +508,6 @@
 ;; treat camelcase as separate words
 (add-hook 'prog-mode-hook 'subword-mode)
 
-;; mode-specific configuration
-(mapcar (lambda (mode-file-name) (load mode-file-name))
-        (directory-files "~/.emacs.d/modes/" nil ".el"))
-
 (delete-selection-mode t)
 
 ;; color-theme and choco
