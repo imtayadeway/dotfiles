@@ -49,6 +49,8 @@
 (setq use-package-verbose t)
 (setq use-package-always-ensure t)
 
+(add-to-list 'load-path "~/.emacs.d/lisp")
+
 (require 'use-package)
 
 (use-package ace-window
@@ -480,8 +482,6 @@
 
 (use-package yasnippet
   :hook ((python-mode ruby-mode rspec-mode) . yas-minor-mode))
-
-(add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; exec path
 (when (memq window-system '(mac ns))
