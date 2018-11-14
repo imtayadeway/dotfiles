@@ -86,7 +86,7 @@ alias less="less -R" # display colors correctly
 alias lh="ls -lahv --group-directories-first"
 alias ll="ls -l --group-directories-first"
 alias ln="ln -v"
-alias ls="ls --color -h"
+alias ls="ls --color=auto -h"
 alias loc="wc -l * | sort -n"
 alias migrate="bundle exec rake db:migrate db:rollback && bundle exec rake db:migrate db:test:prepare"
 alias mkdir="mkdir -p"
