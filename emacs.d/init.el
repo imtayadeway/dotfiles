@@ -389,6 +389,8 @@
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
 (use-package perspective
+  ;; TODO: add this
+  ;; :bind (:map perspective-map ("C-x x m" . twj/go-to-main))
   :config
   (persp-mode))
 
