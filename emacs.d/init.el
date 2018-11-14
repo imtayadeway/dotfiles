@@ -164,7 +164,9 @@
   :ensure nil)
 
 (use-package lorem-ipsum)
-(use-package magit)
+(use-package magit
+  :config
+  (remove-hook 'magit-refs-sections-hook 'magit-insert-tags))
 
 (use-package markdown-mode
   :init
