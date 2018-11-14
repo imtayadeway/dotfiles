@@ -416,7 +416,7 @@
 (use-package restclient)
 
 (use-package rspec-mode
-  :init
+  :config
   (setq rspec-use-rake-when-possible nil)
   (setq rspec-use-opts-file-when-available nil)
   (setq rspec-use-zeus-when-possible nil)
