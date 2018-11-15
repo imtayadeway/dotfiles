@@ -1,5 +1,7 @@
 # Load any supplementary scripts
-for config in "$HOME"/.bashrc.d/*.bash ; do
-  source "$config"
-done
-unset -v config
+
+source ~/.bashrc.d/variables.bash
+source ~/.bashrc.d/path.bash
+source ~/.bashrc.d/aliases.bash
+source ~/.bashrc.d/prompt.bash
+source ~/.bashrc.d/utils.bash
