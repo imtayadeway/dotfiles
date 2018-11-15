@@ -104,6 +104,7 @@
   (setq-default dired-listing-switches "-lAhv --group-directories-first"))
 
 (use-package eldoc
+  :diminish
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . eldoc-mode))
 
 (use-package elixir-mode)
@@ -118,9 +119,11 @@
   :config
   (flx-ido-mode 1))
 
-(use-package flycheck)
+(use-package flycheck
+  :diminish)
 
 (use-package flyspell
+  :diminish
   :hook ((markdown-mode) . flyspell-mode))
 
 (use-package git-timemachine)
@@ -402,6 +405,7 @@
   :config
   (projectile-global-mode)
   (require 'persp-projectile)
+  :diminish
   :hook projectile-rails-on
   :init
   (setq projectile-tags-command "ctags-exuberant -Re -f \"%s\" --languages=-javascript --exclude=.git --exclude=tmp --exclude=log"))
@@ -430,7 +434,10 @@
   (setq rspec-command-options "--format progress"))
 
 (use-package rubocop)
-(use-package ruby-end)
+
+(use-package ruby-end
+  :diminish)
+
 (use-package ruby-hash-syntax)
 
 (use-package ruby-mode
@@ -476,7 +483,8 @@
   (setq web-mode-css-indent-offset 2)
   :mode ("\\.erb$" "\\.html$\\'" "\\.rhtml$\\'" "\\.hbs$"))
 
-(use-package wrap-region)
+(use-package wrap-region
+  :diminish)
 
 (use-package writegood-mode
   :hook ((markdown-mode) . writegood-mode))
@@ -485,6 +493,7 @@
   :mode "\\.yml$")
 
 (use-package yasnippet
+  :diminish
   :hook ((python-mode ruby-mode rspec-mode) . yas-minor-mode))
 
 ;; exec path
