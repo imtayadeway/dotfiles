@@ -392,10 +392,13 @@
   :hook ((cider-mode emacs-lisp-mode lisp-mode) . paredit-mode))
 
 (use-package perspective
-  ;; TODO: add this
-  ;; :bind (:map perspective-map ("C-x x m" . twj/go-to-main))
+  :bind (:map perspective-map ("m" . twj/go-to-main))
   :config
-  (persp-mode))
+  (persp-mode)
+  :preface
+  (defun twj/go-to-main ()
+    (interactive)
+    (persp-switch "main")))
 
 (use-package persp-projectile
   :bind (:map projectile-mode-map
