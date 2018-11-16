@@ -120,6 +120,8 @@
   (flx-ido-mode 1))
 
 (use-package flycheck
+  :init
+  (add-hook 'ruby-mode-hook 'flycheck-mode)
   :diminish)
 
 (use-package flyspell
@@ -409,11 +411,12 @@
   (projectile-global-mode)
   (require 'persp-projectile)
   :diminish
-  :hook projectile-rails-on
   :init
   (setq projectile-tags-command "ctags-exuberant -Re -f \"%s\" --languages=-javascript --exclude=.git --exclude=tmp --exclude=log"))
 
-(use-package projectile-rails)
+(use-package projectile-rails
+  :config
+  (projectile-rails-global-mode))
 
 (use-package python
   :init
@@ -436,35 +439,32 @@
   (setq rspec-use-spring-when-possible nil)
   (setq rspec-command-options "--format progress"))
 
-(use-package rubocop)
+(use-package rubocop
+  :init
+  (add-hook 'ruby-mode-hook 'rubocop-mode))
 
 (use-package ruby-end
-  :diminish)
+  :diminish
+  :init
+  (add-hook 'ruby-mode-hook 'ruby-end-mode))
 
 (use-package ruby-hash-syntax)
 
 (use-package ruby-mode
+  :bind (:map ruby-mode-map
+              ("C-c C-c" . xmp)
+              ("C-c h" . ruby-toggle-hash-syntax)
+              ("\r" . newline-and-indent))
+  :config
+  (require 'rcodetools)
   :mode ("\\.rake$"
          "\\.gemspec$"
          "\\Capfile$"
          "\\Gemfile$"
          "\\Guardfile$"
          "\\Rakefile$")
-  :bind (:map ruby-mode-map ("C-c C-c" . xmp))
   :init
-  (add-hook 'ruby-mode-hook
-            (lambda ()
-              (setq ruby-insert-encoding-magic-comment nil)
-              (ruby-end-mode)
-              (flycheck-mode)
-              (rubocop-mode)
-              (projectile-rails-on)
-              (global-set-key (kbd "C-c h") 'ruby-toggle-hash-syntax)
-              (local-set-key "\r" 'newline-and-indent)
-              ;; TODO: fix this
-              ;; (define-key ruby-mode-map (kbd "C-c C-c") 'xmp)
-              ))
-  :requires rcodetools)
+  (setq ruby-insert-encoding-magic-comment nil))
 
 (use-package rust-mode)
 (use-package sass-mode)
