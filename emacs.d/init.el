@@ -514,7 +514,6 @@
   (exec-path-from-shell-initialize))
 (setq exec-path (append exec-path '("/usr/local/bin" "/usr/local/go/bin")))
 
-(require 'multi-term)
 (require 'mu4e)
 
 ;; allow 20MB of memory (instead of 0.76MB) before calling GC
