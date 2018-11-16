@@ -240,7 +240,7 @@
 
 (use-package multi-term
   :bind (:map term-raw-map
-              ("M-o" . other-window)
+              ("M-o" . other-window) ;; TODO: fix me
               ("C-y" . term-paste))
   :init
   (setq multi-term-program "/bin/bash")
