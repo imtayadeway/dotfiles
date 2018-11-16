@@ -486,6 +486,17 @@
   (setq web-mode-css-indent-offset 2)
   :mode ("\\.erb$" "\\.html$\\'" "\\.rhtml$\\'" "\\.hbs$"))
 
+(use-package whitespace
+  :config
+  (setq-default indent-tabs-mode nil)
+  (setq whitespace-style '(face empty tabs lines-tail trailing))
+  (setq require-final-newline t)
+  (setq whitespace-line-column 120)
+  (global-whitespace-mode t)
+  (add-hook 'before-save-hook 'delete-trailing-whitespace)
+  :diminish (whitespace-mode
+             global-whitespace-mode))
+
 (use-package wrap-region
   :diminish)
 
@@ -525,15 +536,6 @@
 ;; color-theme and choco
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'choco t)
-
-;; whitespace
-(require 'whitespace)
-(setq whitespace-style '(face empty tabs lines-tail trailing))
-(global-whitespace-mode t)
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-(setq-default indent-tabs-mode nil)
-(setq require-final-newline t)
-(setq whitespace-line-column 120)
 
 ;; snippets
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
