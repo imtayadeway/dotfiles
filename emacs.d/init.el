@@ -110,7 +110,6 @@
 (use-package elixir-mode)
 
 (use-package ember-mode)
-(use-package evil)
 (use-package exec-path-from-shell)
 (use-package expand-region)
 (use-package feature-mode)
@@ -517,7 +516,6 @@
 
 (require 'multi-term)
 (require 'mu4e)
-(require 'evil)
 
 ;; allow 20MB of memory (instead of 0.76MB) before calling GC
 (setq gc-cons-threshold 20000000)
