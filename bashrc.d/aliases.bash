@@ -129,6 +129,7 @@ alias usage="du -sch"
 alias vi="vim"
 alias xcopy="xclip -selection clipboard"
 alias xpaste="xclip -o"
+alias yt="yubitoggle"
 
 ### Package management
 alias agi="sudo apt-get install"
