@@ -4,4 +4,3 @@
 
 (diminish-major-mode 'emacs-lisp-mode-hook "el")
 (diminish-major-mode 'lisp-interaction-mode-hook "λ")
-(diminish-major-mode 'python-mode-hook "Py")
