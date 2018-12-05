@@ -458,6 +458,7 @@
               ("\r" . newline-and-indent))
   :config
   (require 'rcodetools)
+  :hook (ruby-mode . (lambda () (setq mode-name "💎")))
   :mode ("\\.rake$"
          "\\.gemspec$"
          "\\Capfile$"
