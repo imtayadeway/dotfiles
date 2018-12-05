@@ -1,0 +1,3 @@
+(use-package ace-window
+  :init
+  (setq aw-keys '(?a ?r ?s ?t ?d ?h ?n ?e ?i ?o)))
