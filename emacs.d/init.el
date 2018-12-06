@@ -80,11 +80,6 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'choco t)
 
-;; wrap region
-(wrap-region-global-mode t)
-(wrap-region-add-wrapper "/" "/" nil 'ruby-mode)
-(wrap-region-add-wrapper "`" "`" nil '(markdown-mode ruby-mode))
-
 ;; pair character completion
 (electric-pair-mode 1)
 
