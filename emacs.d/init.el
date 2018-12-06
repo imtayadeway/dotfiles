@@ -24,9 +24,6 @@
 ;; keys
 (setq x-alt-keysym 'meta)
 
-;; windows
-(winner-mode 1)
-
 ;; put autosaves in temp dir
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
