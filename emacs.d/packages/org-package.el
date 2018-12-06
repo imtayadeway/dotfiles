@@ -1,6 +1,5 @@
 (use-package org
-  ;; TODO: surely :config ???
-  :init
+  :config
   (setq org-directory "~/org")
   (setq notes-directory "~/notes")
 
