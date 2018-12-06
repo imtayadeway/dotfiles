@@ -80,10 +80,6 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'choco t)
 
-;; snippets
-(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
-(yas-global-mode 1)
-
 ;; wrap region
 (wrap-region-global-mode t)
 (wrap-region-add-wrapper "/" "/" nil 'ruby-mode)
