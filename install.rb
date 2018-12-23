@@ -25,7 +25,6 @@ def dotfiles
     "rubocop.yml",
     "rspec",
     "tmux.conf",
-    "vimrc",
   ]
 end
 
