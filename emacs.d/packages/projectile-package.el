@@ -1,4 +1,6 @@
 (use-package projectile
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
   :config
   (projectile-global-mode)
   (require 'persp-projectile)
