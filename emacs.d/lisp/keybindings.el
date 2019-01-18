@@ -9,6 +9,7 @@
 (global-set-key (kbd "C-c g") 'ag-project)
 (global-set-key (kbd "C-c i") 'open-index-file)
 (global-set-key (kbd "C-c j") 'avy-goto-subword-1)
+(global-set-key (kbd "s-j") 'avy-goto-subword-1)
 (global-set-key (kbd "C-c t") 'time)
 (global-set-key (kbd "C-c w") 'ace-window)
 (global-set-key (kbd "C-x C-b") 'tw/list-buffers-and-switch)
