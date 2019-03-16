@@ -6,6 +6,7 @@ export EDITOR="emacsclient -nw -c -a ''"
 export LANG="en_US"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
+export HISTCONTROL=ignoreboth
 export HISTSIZE=-1
 export HISTFILESIZE=200000
 export TERM="xterm-256color"
