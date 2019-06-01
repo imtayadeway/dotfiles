@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+function main {
+    all_mkv_files | reencode_files
+}
+
+function reencode_files() {
+    while read in_fn; do reencode_file "$in_fn" "$(out_fn "$in_fn")"; done
+}
+
+function reencode_file() {
+    echo "reencoding $1 -> $2"
+    mencoder "$1" -of avi -oac mp3lame -ovc x264 -o "$2"
+}
+
+function all_mkv_files() {
+    find . -name "*.mkv" | cut -c 3-
+}
+
+function out_fn() {
+    echo "$1" | sed s/mkv/avi/
+}
+
+main
