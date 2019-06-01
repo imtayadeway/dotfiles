@@ -37,6 +37,7 @@ function set-scaling-factor() {
 
 function ipod-sync() {
     rsync --archive \
+          --delete \
           --verbose \
           --include-from=~/.config/ipod-sync.conf \
           --exclude=\* \
