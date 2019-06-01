@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+SOURCE=$1
+DESTINATION=$2
+BACKUPDIR=$DESTINATION/$(date +%Y-%m-%d)
+OPTS="\
+--verbose \
+--archive \
+--backup \
+--backup-dir=$BACKUPDIR \
+--delete \
+--prune-empty-dirs"
+
+main() {
+    rsync $OPTS $SOURCE $DESTINATION
+}
+
+main
