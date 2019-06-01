@@ -34,3 +34,13 @@ function set-scaling-factor() {
         gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "[{'Gdk/WindowScalingFactor', <$1>}]"
     fi
 }
+
+function ipod-sync() {
+    rsync --archive \
+          --verbose \
+          --include-from=~/.config/ipod-sync.conf \
+          --exclude=\* \
+          --prune-empty-dirs \
+          "$1" \
+          "$2"
+}
