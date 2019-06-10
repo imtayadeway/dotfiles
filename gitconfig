@@ -17,6 +17,7 @@
   co = checkout
   cob = checkout -b
   com = checkout master
+  compare = !xdg-open $(git https)/compare/$(git lasttag)...master
   cp = cherry-pick -x
   ctags = !.git/hooks/ctags
   dc = diff --cached
@@ -26,7 +27,9 @@
   fo = fetch origin
   gr = grep -n
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  https = !git remote get-url origin | sed 's/\\.git//' | sed 's/git@github.com:/https:\\/\\/github.com\\//'
   ir = !git rebase -i origin/master
+  lasttag = describe --abbrev=0 --tags origin/master
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
   pl = pull
@@ -38,6 +41,8 @@
   rb = rebase
   rba = rebase --abort
   rbc = rebase --continue
+  ready = !git log $(git lasttag)..master --first-parent
+  readyfiles = !git diff --name-status git lasttag..master
   rename = branch -m
   rmb = !sh -c 'git branch -d $1 && git push --delete origin $1' -
   rv = remote -v
