@@ -17,7 +17,7 @@
   co = checkout
   cob = checkout -b
   com = checkout master
-  compare = !xdg-open $(git https)/compare/$(git lasttag)...master
+  compare = !xdg-open https://github.com/$(git origin-path)/compare/$(git lasttag)...master
   cp = cherry-pick -x
   ctags = !.git/hooks/ctags
   dc = diff --cached
@@ -27,11 +27,11 @@
   fo = fetch origin
   gr = grep -n
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  https = !git remote get-url origin | sed 's/\\.git//' | sed 's/git@github.com:/https:\\/\\/github.com\\//'
   ir = !git rebase -i origin/master
-  lasttag = describe --abbrev=0 --tags origin/master
+  lasttag = !git fetch origin &>/dev/null && git describe --abbrev=0 --tags origin/master
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
+  origin-path = !git remote get-url origin | cut --delimiter=: --fields=2 | sed 's/.git//'
   pl = pull
   ps = push
   pp = !git pull && git push
