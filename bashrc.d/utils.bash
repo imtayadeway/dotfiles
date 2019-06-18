@@ -45,3 +45,10 @@ function ipod-sync() {
           "$1" \
           "$2"
 }
+
+function clean-kernels() {
+    dpkg -l linux-{image,headers}-"[0-9]*" |
+        awk '/ii/{print $2}' |
+        grep -ve "$(uname -r | sed -r 's/-[a-z]+//')" |
+        xargs echo "sudo apt-get purge"
+}
