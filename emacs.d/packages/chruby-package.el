@@ -1,3 +1,3 @@
 (use-package chruby
   :config
-  (chruby "ruby-2.6.2"))
+  (chruby "ruby-2.6.3"))
