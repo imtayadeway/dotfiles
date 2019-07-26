@@ -14,6 +14,7 @@ pathmunge /usr/local/go/bin
 pathmunge /usr/local/heroku/bin
 pathmunge /sbin after
 pathmunge $HOME/bin after
+pathmunge $HOME/go/bin after
 pathmunge $HOME/.rvm/bin after
 pathmunge $HOME/.cask/bin after
 pathmunge $HOME/.bin after
