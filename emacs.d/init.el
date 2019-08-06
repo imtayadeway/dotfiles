@@ -90,6 +90,7 @@
 (setq confirm-kill-emacs 'y-or-n-p)
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
 
 ;; inf-ruby
 (add-hook 'after-init-hook 'inf-ruby-switch-setup) ;; for using pry in rspec mode
