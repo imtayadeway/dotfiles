@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: describe Class do ... end
-# expand-env: ((top-level (rspec-top-level-desc-p)) (maybe-quote (unless top-level "\"")))
+# expand-env: ((top-level (rspec-top-level-desc-p)))
 # --
-`(and top-level "RSpec.")`describe `maybe-quote`${1:`(and top-level (rspec-class-from-file-name))`}`maybe-quote` do
+`(and top-level "RSpec.")`describe `(unless top-level "\"")`${1:`(and top-level (rspec-class-from-file-name))`}`(unless top-level "\"")` do
   $0
 end
