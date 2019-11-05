@@ -134,6 +134,7 @@ alias xpaste="xclip -o"
 alias yt="yubitoggle"
 
 ### Package management
+alias agc="sudo apt-get update && sudo apt-get clean && sudo apt-get autoclean"
 alias agi="sudo apt-get install"
 alias agr="sudo apt-get remove"
 alias acs="apt-cache search"
