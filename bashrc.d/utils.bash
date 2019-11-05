@@ -39,6 +39,7 @@ function ipod-sync() {
     rsync --archive \
           --delete \
           --verbose \
+          --ignore-existing \
           --include-from=~/.config/ipod-sync.conf \
           --exclude=\* \
           --prune-empty-dirs \
