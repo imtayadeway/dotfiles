@@ -12,6 +12,7 @@ def dotfiles
     "bashrc.d",
     "bin",
     "bundle/config",
+    "config/ipod-sync.conf",
     "config/redshift.conf",
     "emacs.d",
     "gemrc",
