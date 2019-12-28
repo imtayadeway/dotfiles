@@ -53,3 +53,33 @@ function clean-kernels() {
         grep -ve "$(uname -r | sed -r 's/-[a-z]+//')" |
         xargs echo "sudo apt-get purge"
 }
+
+function insta-resize() {
+    local in_filename="$1"
+    local bname=$(basename -- "${in_filename}")
+    local extension="${bname##*.}"
+    local filename="${bname%.*}"
+    local out_filename="${filename}-i.${extension}"
+
+    gimp --no-interface \
+         --verbose \
+         --batch="(let* ((in-filename \"$in_filename\")
+       (out-filename \"$out_filename\")
+       (image (car (gimp-file-load RUN-NONINTERACTIVE in-filename in-filename)))
+       (drawable (car (gimp-image-get-active-layer image)))
+       (old-width (car (gimp-image-width image)))
+       (old-height (car (gimp-image-height image)))
+       (is-landscape (> old-width old-height))
+       (is-portrait (> old-height old-width))
+       (new-width (max old-width old-height))
+       (new-height (max old-width old-height))
+       (offx (if is-landscape 0 (floor (/ (- new-width old-width) 2))))
+       (offy (if is-portrait 0 (floor (/ (- new-height old-height) 2)))))
+  (gimp-image-resize image new-width new-height offx offy)
+  (gimp-layer-resize-to-image-size drawable)
+  (gimp-file-save RUN-NONINTERACTIVE image drawable out-filename out-filename)
+  (gimp-image-delete image))
+" \
+         --batch='(gimp-quit 0)'
+
+}
