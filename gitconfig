@@ -50,6 +50,7 @@
   st = status
   su = submodule update --init --recursive
   up = !git fetch origin && git rebase origin/master
+  whichtag = !sh -c 'git tag --contains $1 | head --lines=1' -
   who = shortlog -n -s --no-merges
   wip = !git add -A && git commit -m "wip"
 [color]
