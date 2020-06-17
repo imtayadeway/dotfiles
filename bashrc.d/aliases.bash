@@ -82,6 +82,7 @@ alias js="bundle exec jekyll serve --drafts"
 alias jsonpp="python -m json.tool"
 alias killemacs="emacsclient -e '(kill-emacs)'"
 alias killruby='killall -9 ruby'
+alias killskype='killall skypeforlinux'
 alias l="lima"
 alias la="ls -la --group-directories-first"
 alias less="less -R" # display colors correctly
@@ -89,6 +90,7 @@ alias lh="ls -lahv --group-directories-first"
 alias ll="ls -l --group-directories-first"
 alias ln="ln -v"
 alias ls="ls --color=auto -h"
+alias rotatelogs="sudo logrotate --force --verbose /etc/logrotate.conf"
 alias loc="wc -l * | sort -n"
 alias migrate="bundle exec rake db:migrate db:rollback && bundle exec rake db:migrate db:test:prepare"
 alias mkdir="mkdir -p"
