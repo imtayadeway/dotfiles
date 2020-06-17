@@ -2,7 +2,7 @@ source $HOME/.bin/git-completion.sh
 
 ### variables
 export DISPLAY=:0.0
-export EDITOR="emacsclient -nw -c -a ''"
+export EDITOR="emacs --no-init-file --no-window-system --no-splash"
 export LANG="en_US"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"

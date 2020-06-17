@@ -33,6 +33,7 @@ alias dock="set-scaling-factor 1"
 alias dr="cd ~/Dropbox"
 alias dt="cd ~/Desktop"
 alias e=$EDITOR
+alias ec="emacsclient -nw -c -a ''"
 alias fucking="sudo"
 alias fs="bundle exec foreman start"
 alias g="git"
