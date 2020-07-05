@@ -83,3 +83,28 @@ function insta-resize() {
     done
 
 }
+
+function web-resize() {
+    for in_filename in "$@"
+    do
+        local bname=$(basename -- "${in_filename}")
+        local extension="${bname##*.}"
+        local filename="${bname%.*}"
+        local out_filename="${filename}-web.${extension}"
+
+        gimp --no-interface \
+             --batch="(let* ((in-filename \"$in_filename\")
+                            (out-filename \"$out_filename\")
+                            (image (car (gimp-file-load RUN-NONINTERACTIVE in-filename in-filename)))
+                            (drawable (car (gimp-image-get-active-layer image)))
+                            (old-width (car (gimp-image-width image)))
+                            (old-height (car (gimp-image-height image)))
+                            (scale-factor (/ 1500 (max old-width old-height)))
+                            (new-width (* scale-factor old-width))
+                            (new-height (* scale-factor old-height)))
+                       (gimp-image-scale image new-width new-height)
+                       (file-jpeg-save RUN-NONINTERACTIVE image drawable out-filename out-filename 0.85 0 1 1 \"\" 2 1 0 0)
+                       (gimp-image-delete image))" \
+             --batch='(gimp-quit 0)'
+    done
+}
