@@ -108,3 +108,7 @@ function web-resize() {
              --batch='(gimp-quit 0)'
     done
 }
+
+function binary-to-plain() {
+    cat "$1" | tr -d "\0"
+}
