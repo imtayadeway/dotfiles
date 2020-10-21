@@ -21,6 +21,10 @@
 (when (member "Symbola" (font-family-list))
   (set-fontset-font t 'unicode "Symbola" nil 'prepend))
 
+;; split windows
+(setq split-height-threshold nil)
+(setq split-width-threshold 160)
+
 ;; keys
 (setq x-alt-keysym 'meta)
 
