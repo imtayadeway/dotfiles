@@ -2,6 +2,6 @@
 # name: test class
 # key: tc
 # --
-class TC_${1:Class} < Test::Unit::TestCase
+class TC_${1:Class} < Minitest::Test
       $0
 end
