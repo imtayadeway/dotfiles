@@ -17,6 +17,7 @@ readonly DOTFILES=(
     gitignore
     gitmessage
     lein/profiles.clj
+    mbsyncrc
     offlineimaprc
     offlineimap.py
     railsrc

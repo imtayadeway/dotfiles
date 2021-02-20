@@ -5,8 +5,9 @@
   (setq mu4e-maildir "~/mail")
   (setq mu4e-attachment-dir "~/Desktop")
   (setq mu4e-view-show-images t)
-  (setq mu4e-get-mail-command "offlineimap")
+  (setq mu4e-get-mail-command "mbsync --all")
   (setq mu4e-update-interval 300)
+  (setq mu4e-change-filenames-when-moving t)
 
   ;; use imagemagick, if available
   (when (fboundp 'imagemagick-register-types)

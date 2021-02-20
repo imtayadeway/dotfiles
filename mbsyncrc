@@ -1,0 +1,96 @@
+Create Both
+Expunge Both
+SyncState *
+
+########################################
+# Personal
+########################################
+
+IMAPAccount personal
+Host mail.messagingengine.com
+User timwade@fastmail.com
+PassCmd "gpg2 -q --no-tty -d ~/.authinfo.gpg | cut --delimiter ' ' --fields=8 | head --lines=1"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore personal-remote
+Account personal
+
+MaildirStore personal-local
+Path ~/mail/personal/
+Inbox ~/mail/personal/INBOX
+
+Channel personal-inbox
+Master :personal-remote:INBOX
+Slave :personal-local:
+
+Channel personal-archive
+Master :personal-remote:INBOX/Archive
+Slave :personal-local:INBOX.Archive
+
+Channel personal-drafts
+Master :personal-remote:INBOX/Drafts
+Slave :personal-local:INBOX.Drafts
+
+Channel personal-ebay
+Master :personal-remote:INBOX/Ebay
+Slave :personal-local:INBOX.Ebay
+
+Channel personal-github
+Master :personal-remote:INBOX/Github
+Slave :personal-local:INBOX.Github
+
+Channel personal-junk
+Master ":personal-remote:INBOX/Junk Mail"
+Slave ":personal-local:INBOX.Junk Mail"
+
+Channel personal-music
+Master :personal-remote:INBOX/Music
+Slave :personal-local:INBOX.Music
+
+Channel personal-notes
+Master :personal-remote:INBOX/Notes
+Slave :personal-local:INBOX.Notes
+
+Channel personal-patreon
+Master :personal-remote:INBOX/Patreon
+Slave :personal-local:INBOX.Patreon
+
+Channel personal-ruby
+Master :personal-remote:INBOX/Ruby
+Slave :personal-local:INBOX.Ruby
+
+Channel personal-sent
+Master :personal-remote:INBOX/Sent
+Slave :personal-local:INBOX.Sent
+
+Channel personal-sent-items
+Master ":personal-remote:INBOX/Sent Items"
+Slave ":personal-local:INBOX.Sent Items"
+
+Channel personal-trash
+Master :personal-remote:INBOX/Trash
+Slave :personal-local:INBOX.Trash
+
+Channel personal-travel
+Master :personal-remote:INBOX/Travel
+Slave :personal-local:INBOX.Travel
+
+Group personal
+Channel personal-inbox
+Channel personal-archive
+Channel personal-drafts
+Channel personal-ebay
+Channel personal-github
+Channel personal-junk
+Channel personal-music
+Channel personal-notes
+Channel personal-patreon
+Channel personal-ruby
+Channel personal-sent
+Channel personal-sent-items
+Channel personal-trash
+Channel personal-travel
+
+Group inboxes
+Channel personal-inbox
