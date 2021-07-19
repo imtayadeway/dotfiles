@@ -3,6 +3,9 @@
   (setq org-directory "~/org")
   (setq notes-directory "~/notes")
 
+  (setq org-todo-keywords
+        '((sequence "TODO" "NEXT" "|" "DONE")))
+
   (defun construct-filename (directory filename)
     (concat (file-name-as-directory directory) filename))
 
