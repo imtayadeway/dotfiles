@@ -4,7 +4,17 @@
   (setq notes-directory "~/notes")
 
   (setq org-todo-keywords
-        '((sequence "TODO" "NEXT" "|" "DONE")))
+        '((sequence "TODO" "NEXT" "|" "DONE")
+          (sequence "WAITING" "HOLD" "|" "CANCELLED")))
+
+  (setq org-todo-state-tags-triggers
+        (quote (("CANCELLED" ("CANCELLED" . t))
+                ("WAITING" ("WAITING" . t))
+                ("HOLD" ("WAITING") ("HOLD" . t))
+                (done ("WAITING") ("HOLD"))
+                ("TODO" ("WAITING") ("CANCELLED") ("HOLD"))
+                ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
+                ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
 
   (defun construct-filename (directory filename)
     (concat (file-name-as-directory directory) filename))
