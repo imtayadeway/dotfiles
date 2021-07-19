@@ -88,7 +88,7 @@
 
           ("t" "Todo"
            entry
-           (file (org-file-path "index.org"))
+           (file "~/org/index.org")
            "* TODO %?\n")
 
           ("T" "Todo with tags"
