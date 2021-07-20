@@ -29,9 +29,6 @@
                   (org-tags-match-list-sublevels t)))
                 (" " "Agenda"
                  ((agenda "" nil)
-                  (tags "REFILE"
-                        ((org-agenda-overriding-header "Tasks to Refile")
-                         (org-tags-match-list-sublevels nil)))
                   (tags-todo "-CANCELLED/!"
                              ((org-agenda-overriding-header "Stuck Projects")
                               (org-agenda-skip-function 'tw/skip-non-stuck-projects)
@@ -49,24 +46,10 @@
                               (org-tags-match-list-sublevels t)
                               (org-agenda-sorting-strategy
                                '(todo-state-down effort-up category-keep))))
-                  (tags-todo "-REFILE-CANCELLED-WAITING-HOLD/!"
-                             ((org-agenda-overriding-header "Project Subtasks")
-                              (org-agenda-skip-function 'tw/skip-non-project-tasks)
-                              (org-agenda-sorting-strategy
-                               '(category-keep))))
-                  (tags-todo "-REFILE-CANCELLED-WAITING-HOLD/!"
-                             ((org-agenda-overriding-header "Standalone Tasks")
-                              (org-agenda-skip-function 'tw/skip-project-tasks)
-                              (org-agenda-sorting-strategy
-                               '(category-keep))))
                   (tags-todo "-CANCELLED+WAITING|HOLD/!"
                              ((org-agenda-overriding-header "Waiting and Postponed Tasks")
                               (org-agenda-skip-function 'tw/skip-non-tasks)
-                              (org-tags-match-list-sublevels nil)))
-                  (tags "-REFILE/"
-                        ((org-agenda-overriding-header "Tasks to Archive")
-                         (org-agenda-skip-function 'tw/skip-non-archivable-tasks)
-                         (org-tags-match-list-sublevels nil))))
+                              (org-tags-match-list-sublevels nil))))
                  nil))))
 
   (defun tw/find-project-task ()
@@ -184,38 +167,6 @@ Skip project and sub-project tasks, habits, and project related tasks."
           next-headline)
          ((and (tw/is-task-p) (not (tw/is-project-subtree-p)))
           next-headline)
-         (t
-          nil)))))
-
-  (defun tw/skip-project-tasks ()
-    "Show non-project tasks.
-Skip project and sub-project tasks, habits, and project related tasks."
-    (save-restriction
-      (widen)
-      (let* ((subtree-end (save-excursion (org-end-of-subtree t))))
-        (cond
-         ((tw/is-project-p)
-          subtree-end)
-         ((tw/is-project-subtree-p)
-          subtree-end)
-         (t
-          nil)))))
-
-  (defun tw/skip-non-project-tasks ()
-    "Show project tasks.
-Skip project and sub-project tasks, habits, and loose non-project tasks."
-    (save-restriction
-      (widen)
-      (let* ((subtree-end (save-excursion (org-end-of-subtree t)))
-             (next-headline (save-excursion (or (outline-next-heading) (point-max)))))
-        (cond
-         ((tw/is-project-p)
-          next-headline)
-         ((and (tw/is-project-subtree-p)
-               (member (org-get-todo-state) (list "NEXT")))
-          subtree-end)
-         ((not (tw/is-project-subtree-p))
-          subtree-end)
          (t
           nil)))))
 
