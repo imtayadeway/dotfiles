@@ -112,3 +112,8 @@ function web-resize() {
 function binary-to-plain() {
     cat "$1" | tr -d "\0"
 }
+
+function disable-lock() {
+    gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend 'false'
+    gsettings set org.gnome.desktop.screensaver lock-enabled 'false'
+}
