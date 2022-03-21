@@ -30,35 +30,35 @@ function main() {
     for file in "${DOTFILES[@]}"; do
         try_linking $file
     done
-    link_bashrc
 }
 
 function try_linking() {
-    if [ -e "$1" ]
+    if [ -e "$(link_name $1)" ]
     then
-        echo "skipping " $(target $1) ": " $(skip_reason $(target $1))
+        echo "skipping " $1 ": " $(skip_reason $1)
     else
-        echo "linking " $(target $1)
-        mkdir
+        echo "linking " $(link_name $1)
+	mkdir --parents $(dirname $(link_name $1))
+        ln --symbolic $(link_target $1) $(link_name $1)
     fi
 }
 
-function target() {
-    echo $(readlink --canonicalize $(echo "~/." $1))
+function link_target() {
+    readlink --canonicalize ~/.dotfiles/"$1"
+}
+
+function link_name() {
+    readlink --canonicalize-missing ~/."$1"
 }
 
 function skip_reason() {
-    if [ -h $1 ]
+    if [ -L "$HOME/.$1" ]
     then
         echo "already linked"
     else
-        echo "file already exists. deleted or move before reinstalling."
+        echo "file already exists. delete or move before reinstalling."
     fi
 
-}
-
-function link_bashrc() {
-    echo "boop"
 }
 
 main
