@@ -52,6 +52,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/packages")
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e/")
 
 (require 'use-package)
 
@@ -77,9 +78,14 @@
 
 (delete-selection-mode t)
 
-;; color-theme and choco
+;; color-themes and choco
+(use-package solarized-theme)
+(use-package zenburn-theme)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'choco t)
+(if (display-graphic-p)
+    (progn
+      (load-theme 'choco t))
+  (load-theme 'zenburn t))
 
 ;; pair character completion
 (electric-pair-mode 1)
