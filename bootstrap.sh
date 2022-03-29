@@ -2,6 +2,28 @@
 
 set -e
 
+readonly PACKAGES=(
+    build-essential
+    ca-certificates
+    curl
+    git
+    gnupg
+    gnupg2
+    guile-2.2-dev
+    html2text
+    isync
+    libgmime-3.0-dev
+    libsodium23
+    libwebkit2gtk-4.0-dev
+    libxapian-dev
+    nodejs
+    npm
+    redis-server
+    silversearcher-ag
+    tree
+    xdg-utils
+)
+
 function main() {
     install_dependencies
     install_postgresql
@@ -9,18 +31,7 @@ function main() {
 
 function install_dependencies() {
     sudo apt-get update &&
-	sudo apt-get install --assume-yes git \
-	     build-essential \
-	     gnupg2 \
-	     curl ca-certificates gnupg \
-	     redis-server \
-	     tree \
-	     libsodium23 \
-	     libgmime-3.0-dev libxapian-dev \
-	     guile-2.2-dev html2text xdg-utils \
-	     libwebkit2gtk-4.0-dev \
-	     silversearcher-ag \
-	     isync
+	sudo apt-get install --assume-yes ${PACKAGES[*]}
 }
 
 function install_postgresql() {
