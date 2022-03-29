@@ -185,7 +185,7 @@ completion)
             (format "-t %s --filename=%s" t-opt bfn))
         ""))))
 
-(require 'cl)
+(require 'cl-lib)
 
 (defun rct-find-test-script-buffer (&optional buffer-list)
   "Find the latest used Ruby test script buffer."
