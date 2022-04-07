@@ -29,24 +29,32 @@
                   (org-tags-match-list-sublevels t)))
                 (" " "Agenda"
                  ((agenda "" nil)
-                  (tags-todo "-CANCELLED/!"
+                  (tags-todo "-CANCELLED-work/!"
                              ((org-agenda-overriding-header "Stuck Projects")
                               (org-agenda-skip-function 'tw/skip-non-stuck-projects)
                               (org-agenda-sorting-strategy
                                '(category-keep))))
-                  (tags-todo "-HOLD-CANCELLED/!"
+                  (tags-todo "-HOLD-CANCELLED-work/!"
                              ((org-agenda-overriding-header "Projects")
                               (org-agenda-skip-function 'tw/skip-non-projects)
                               (org-tags-match-list-sublevels 'indented)
                               (org-agenda-sorting-strategy
                                '(category-keep))))
-                  (tags-todo "-CANCELLED/!NEXT"
+                  (tags-todo "-CANCELLED-work/!NEXT"
                              ((org-agenda-overriding-header "Project Next Tasks")
                               (org-agenda-skip-function 'tw/skip-projects-and-habits-and-single-tasks)
                               (org-tags-match-list-sublevels t)
                               (org-agenda-sorting-strategy
                                '(todo-state-down effort-up category-keep))))
-                  (tags-todo "-CANCELLED+WAITING|HOLD/!"
+                  (tags-todo "-REFILE-CANCELLED-WAITING-HOLD-work-birthday/!"
+                             ((org-agenda-overriding-header "Standalone Tasks")
+                              (org-agenda-skip-function 'tw/skip-project-tasks)
+                              (org-agenda-todo-ignore-scheduled t)
+                              (org-agenda-todo-ignore-deadlines t)
+                              (org-agenda-todo-ignore-with-date t)
+                              (org-agenda-sorting-strategy
+                               '(priority-down))))
+                  (tags-todo "-CANCELLED-work+WAITING|HOLD/!"
                              ((org-agenda-overriding-header "Waiting and Postponed Tasks")
                               (org-agenda-skip-function 'tw/skip-non-tasks)
                               (org-tags-match-list-sublevels nil))))
@@ -125,6 +133,20 @@ Callers of this function already widen the buffer view."
                   next-headline
                 nil)) ; a stuck project, has subtasks but no next task
           next-headline))))
+
+  (defun tw/skip-project-tasks ()
+    "Show non-project tasks.
+Skip project and sub-project tasks, habits, and project related tasks."
+    (save-restriction
+      (widen)
+      (let* ((subtree-end (save-excursion (org-end-of-subtree t))))
+        (cond
+         ((tw/is-project-p)
+          subtree-end)
+         ((tw/is-project-subtree-p)
+          subtree-end)
+         (t
+          nil)))))
 
   (defun tw/skip-non-projects ()
     "Skip trees that are not projects"
