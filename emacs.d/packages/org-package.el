@@ -27,7 +27,7 @@
         (quote (("N" "Notes" tags "NOTE"
                  ((org-agenda-overriding-header "Notes")
                   (org-tags-match-list-sublevels t)))
-                (" " "Agenda"
+                ("A" "Agenda"
                  ((agenda "" nil)
                   (tags-todo "-CANCELLED-work/!"
                              ((org-agenda-overriding-header "Stuck Projects")
