@@ -6,6 +6,7 @@ readonly PACKAGES=(
     build-essential
     ca-certificates
     curl
+    exuberant-ctags
     git
     gnupg
     gnupg2
