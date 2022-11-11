@@ -14,6 +14,7 @@ readonly PACKAGES=(
     html2text
     isync
     libgmime-3.0-dev
+    libpq-dev
     libsodium23
     libwebkit2gtk-4.0-dev
     libxapian-dev
