@@ -13,6 +13,7 @@ readonly PACKAGES=(
     guile-2.2-dev
     html2text
     isync
+    keychain
     libgmime-3.0-dev
     libpq-dev
     libsodium23
