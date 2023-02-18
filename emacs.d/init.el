@@ -122,3 +122,17 @@
   (switch-to-buffer "*Org Agenda*")
   (other-window 1)
   (mu4e))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(with-editor zenburn-theme yasnippet yaml-mode writegood-mode wrap-region web-mode use-package undo-tree typescript-mode toggle-quotes solarized-theme smex scss-mode sass-mode rust-mode ruby-hash-syntax ruby-end rubocop rspec-mode restclient rainbow-mode rainbow-delimiters projectile-rails persp-projectile paredit multi-term minitest markdown-mode magit lorem-ipsum kibit-helper json-mode inf-mongo inf-clojure ido-vertical-mode graphql-mode go-mode git-timemachine flycheck flx-ido feature-mode expand-region exec-path-from-shell ember-mode diminish coffee-mode cider chruby bundler alchemist aggressive-indent ag ace-window))
+ '(warning-suppress-types '((comp))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
