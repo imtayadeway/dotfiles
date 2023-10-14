@@ -240,6 +240,11 @@ Skip project and sub-project tasks, habits, and project related tasks."
            checkitem
            (file (org-file-path "groceries.org")))
 
+          ("h" "Hiking Trip"
+           entry
+           (file "~/org/index.org")
+           "* TODO %?\n  - [ ] check trip reports\n  - [ ] permits\n  - [ ] road conditions")
+
           ("j" "Journal"
            entry
            (file (construct-filename notes-directory "journal.org"))
