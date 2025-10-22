@@ -6,6 +6,7 @@ readonly PACKAGES=(
     build-essential
     ca-certificates
     curl
+    emacs
     exuberant-ctags
     git
     gnupg
@@ -14,14 +15,17 @@ readonly PACKAGES=(
     html2text
     isync
     keychain
+    libccid
     libgmime-3.0-dev
     libpq-dev
     libsodium23
-    libwebkit2gtk-4.0-dev
+    libwebkit2gtk-4.1-dev
     libxapian-dev
+    meson
     nodejs
     npm
     redis-server
+    pcscd
     silversearcher-ag
     tree
     xdg-utils
@@ -39,7 +43,7 @@ function install_dependencies() {
 
 function install_postgresql() {
     curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg >/dev/null
-    sudo apt-get install --assume-yes postgresql-14 libpq-dev
+    sudo apt-get install --assume-yes postgresql-17 libpq-dev
     sudo -u postgres createuser --interactive
     sudo -u postgres createdb tim
     # update pg_hba.conf
