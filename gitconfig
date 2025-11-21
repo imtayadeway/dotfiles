@@ -74,3 +74,5 @@
   path = ~/.gitconfig.local
 [gpg]
   program = gpg2
+[init]
+  defaultBranch = main
