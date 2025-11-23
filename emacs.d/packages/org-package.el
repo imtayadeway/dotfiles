@@ -29,6 +29,24 @@
                   (org-tags-match-list-sublevels t)))
                 ("A" "Agenda"
                  ((agenda "" nil)
+                  (tags-todo "-REFILE-CANCELLED-WAITING-HOLD-work-birthday/!"
+                             ((org-agenda-overriding-header "Standalone Tasks")
+                              (org-agenda-skip-function 'tw/skip-project-tasks)
+                              (org-agenda-todo-ignore-scheduled t)
+                              (org-agenda-todo-ignore-deadlines t)
+                              (org-agenda-todo-ignore-with-date t)
+                              (org-agenda-sorting-strategy
+                               '(priority-down))))
+                  (tags-todo "-CANCELLED-work/!NEXT"
+                             ((org-agenda-overriding-header "Project Next Tasks")
+                              (org-agenda-skip-function 'tw/skip-projects-and-habits-and-single-tasks)
+                              (org-tags-match-list-sublevels t)
+                              (org-agenda-sorting-strategy
+                               '(priority-down todo-state-down))))
+                  (tags-todo "-CANCELLED-work+WAITING|HOLD/!"
+                             ((org-agenda-overriding-header "Waiting and Postponed Tasks")
+                              (org-agenda-skip-function 'tw/skip-non-tasks)
+                              (org-tags-match-list-sublevels nil)))
                   (tags-todo "-CANCELLED-work/!"
                              ((org-agenda-overriding-header "Stuck Projects")
                               (org-agenda-skip-function 'tw/skip-non-stuck-projects)
@@ -39,25 +57,7 @@
                               (org-agenda-skip-function 'tw/skip-non-projects)
                               (org-tags-match-list-sublevels 'indented)
                               (org-agenda-sorting-strategy
-                               '(category-keep))))
-                  (tags-todo "-CANCELLED-work/!NEXT"
-                             ((org-agenda-overriding-header "Project Next Tasks")
-                              (org-agenda-skip-function 'tw/skip-projects-and-habits-and-single-tasks)
-                              (org-tags-match-list-sublevels t)
-                              (org-agenda-sorting-strategy
-                               '(todo-state-down effort-up category-keep))))
-                  (tags-todo "-REFILE-CANCELLED-WAITING-HOLD-work-birthday/!"
-                             ((org-agenda-overriding-header "Standalone Tasks")
-                              (org-agenda-skip-function 'tw/skip-project-tasks)
-                              (org-agenda-todo-ignore-scheduled t)
-                              (org-agenda-todo-ignore-deadlines t)
-                              (org-agenda-todo-ignore-with-date t)
-                              (org-agenda-sorting-strategy
-                               '(priority-down))))
-                  (tags-todo "-CANCELLED-work+WAITING|HOLD/!"
-                             ((org-agenda-overriding-header "Waiting and Postponed Tasks")
-                              (org-agenda-skip-function 'tw/skip-non-tasks)
-                              (org-tags-match-list-sublevels nil))))
+                               '(category-keep)))))
                  nil))))
 
   (defun tw/find-project-task ()
