@@ -5,6 +5,7 @@ set -e
 readonly PACKAGES=(
     build-essential
     ca-certificates
+    cifs-utils
     curl
     emacs
     exuberant-ctags
