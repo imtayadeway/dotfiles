@@ -1,3 +1,7 @@
+(defun tw/fix-quotation-marks ()
+  (interactive)
+  (replace-string "’" "'"))
+
 (defun tw/list-buffers-and-switch ()
   (interactive)
   (list-buffers)
