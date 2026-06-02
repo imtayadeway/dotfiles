@@ -137,7 +137,6 @@ alias undeployed='git fetch --multiple production origin && git log production/m
 alias undock="set-scaling-factor 2"
 alias ung="tar xzvf"
 alias usage="du -sch"
-
 alias vi="vim"
 alias xcopy="xclip -selection clipboard"
 alias xpaste="xclip -o"
