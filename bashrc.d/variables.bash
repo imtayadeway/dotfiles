@@ -9,6 +9,7 @@ export LC_CTYPE="en_US.UTF-8"
 export HISTCONTROL=ignoreboth
 export HISTSIZE=-1
 export HISTFILESIZE=200000
+export PGGSSENCMODE=disable
 export TERM="xterm-256color"
 PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
 
