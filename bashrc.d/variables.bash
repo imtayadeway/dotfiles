@@ -1,7 +1,6 @@
 source $HOME/.bin/git-completion.sh
 
-### variables
-export DISPLAY=:0.0
+# variables
 export EDITOR="emacs --no-init-file --no-window-system --no-splash"
 export GPG_TTY=$(tty)
 export LANG="en_US"
