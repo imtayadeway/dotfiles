@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+declare -a prompts=(
+  "Identify the areas of the codebase that are most likely CPU bound and list them in a report ordered by severity. Do not exceed 30 items."
+  "Identify any possible memory leaks in the system, and list them in a report from major to minor. Do not exceed 30 items."
+  "Identify the endpoints that are likely most bound by IO and generate a report ranking them by severity. Do not exceed 30 items."
+  "Identify any possible security issues in the codebase and list them in a report ordered by severity. Do not exceed 20 items."
+  "Generate a list of the worst code smells in the codebase, ranked by severity. Do not exceed 50 items."
+  "Summarize the changes in the 10 most important commits in the last week."
+ )
+
+for prompt in "${prompts[@]}"; do
+  claude -p "$prompt" --allowedTools "Read,Bash"
+done
