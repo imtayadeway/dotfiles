@@ -8,6 +8,8 @@ declare -a prompts=(
   "Identify the endpoints that are likely most bound by IO and generate a report ranking them by severity. Do not exceed 30 items."
   "Identify any possible security issues in the codebase and list them in a report ordered by severity. Do not exceed 20 items."
   "Generate a list of the worst code smells in the codebase, ranked by severity. Do not exceed 50 items."
+  "Identify what are likely the slowest endpoints and list them in a report by severity. Do not exceed 30 items."
+  "Identity the top places where a one-line change could likely positively impact performance and list them in a report ordered by impact. Do not exceed 50 items."
  )
 
 for prompt in "${prompts[@]}"; do
