@@ -2,6 +2,7 @@
   :config
   (setq org-directory "~/org")
   (setq notes-directory "~/notes")
+  (setq org-startup-indented t)
 
   (setq org-todo-keywords
         '((sequence "TODO" "NEXT" "|" "DONE")
