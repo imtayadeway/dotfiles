@@ -15,4 +15,4 @@ PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
 
 source "/usr/local/share/chruby/chruby.sh"
 source "/usr/local/share/chruby/auto.sh"
-chruby 3.4.7
+chruby 3.4.9
