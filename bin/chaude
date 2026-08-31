@@ -10,6 +10,7 @@ declare -a prompts=(
   "Generate a list of the worst code smells in the codebase, ranked by severity. Do not exceed 50 items."
   "Identify what are likely the slowest endpoints and list them in a report by severity. Do not exceed 30 items."
   "Identity the top places where a one-line change could likely positively impact performance and list them in a report ordered by impact. Do not exceed 50 items."
+  "Find the most CPU-intensive code that lies in a critical path that could benefit from extracting into an external binding"
  )
 
 for prompt in "${prompts[@]}"; do
