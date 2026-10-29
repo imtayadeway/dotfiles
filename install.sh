@@ -25,6 +25,7 @@ readonly DOTFILES=(
     rubocop.yml
     rspec
     tmux.conf
+    yt-dlp.conf
 )
 
 function main() {
