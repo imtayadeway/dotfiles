@@ -27,7 +27,7 @@ def dotfiles
     "rubocop.yml",
     "rspec",
     "tmux.conf",
-    "yt-dlp.conf",
+    "yt-dlp/config",
   ]
 end
 
