@@ -1,7 +1,9 @@
 (defun tw/fix-quotation-marks ()
   (interactive)
+  (set-mark-command)
   (mark-whole-buffer)
-  (replace-string "'" "'"))
+  (replace-string "'" "'")
+  (pop-to-mark-command))
 
 (defun tw/list-buffers-and-switch ()
   (interactive)
